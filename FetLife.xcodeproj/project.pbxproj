@@ -1,0 +1,342 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		29AEE42B140036AE00730510 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29AEE42A140036AE00730510 /* UIKit.framework */; };
+		29AEE42D140036AE00730510 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29AEE42C140036AE00730510 /* Foundation.framework */; };
+		29AEE42F140036AE00730510 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29AEE42E140036AE00730510 /* CoreData.framework */; };
+		29AEE435140036AE00730510 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 29AEE433140036AE00730510 /* InfoPlist.strings */; };
+		29AEE437140036AE00730510 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29AEE436140036AE00730510 /* main.m */; };
+		29AEE43B140036AE00730510 /* FLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 29AEE43A140036AE00730510 /* FLAppDelegate.m */; };
+		29AEE43E140036AE00730510 /* FetLife.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 29AEE43C140036AE00730510 /* FetLife.xcdatamodeld */; };
+		29AEE441140036AE00730510 /* FLMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29AEE440140036AE00730510 /* FLMasterViewController.m */; };
+		29AEE444140036AE00730510 /* FLDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29AEE443140036AE00730510 /* FLDetailViewController.m */; };
+		29AEE447140036AE00730510 /* FLMasterViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29AEE445140036AE00730510 /* FLMasterViewController_iPhone.xib */; };
+		29AEE44A140036AE00730510 /* FLMasterViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29AEE448140036AE00730510 /* FLMasterViewController_iPad.xib */; };
+		29AEE44D140036AE00730510 /* FLDetailViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29AEE44B140036AE00730510 /* FLDetailViewController_iPhone.xib */; };
+		29AEE450140036AE00730510 /* FLDetailViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29AEE44E140036AE00730510 /* FLDetailViewController_iPad.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		29AEE426140036AE00730510 /* FetLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FetLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		29AEE42A140036AE00730510 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		29AEE42C140036AE00730510 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		29AEE42E140036AE00730510 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		29AEE432140036AE00730510 /* FetLife-Info.plist */ = {isa = PBXFileReference; path = "FetLife-Info.plist"; sourceTree = "<group>"; };
+		29AEE434140036AE00730510 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		29AEE436140036AE00730510 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29AEE438140036AE00730510 /* FetLife-Prefix.pch */ = {isa = PBXFileReference; path = "FetLife-Prefix.pch"; sourceTree = "<group>"; };
+		29AEE439140036AE00730510 /* FLAppDelegate.h */ = {isa = PBXFileReference; path = FLAppDelegate.h; sourceTree = "<group>"; };
+		29AEE43A140036AE00730510 /* FLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FLAppDelegate.m; sourceTree = "<group>"; };
+		29AEE43D140036AE00730510 /* FetLife.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FetLife.xcdatamodel; sourceTree = "<group>"; };
+		29AEE43F140036AE00730510 /* FLMasterViewController.h */ = {isa = PBXFileReference; path = FLMasterViewController.h; sourceTree = "<group>"; };
+		29AEE440140036AE00730510 /* FLMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FLMasterViewController.m; sourceTree = "<group>"; };
+		29AEE442140036AE00730510 /* FLDetailViewController.h */ = {isa = PBXFileReference; path = FLDetailViewController.h; sourceTree = "<group>"; };
+		29AEE443140036AE00730510 /* FLDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FLDetailViewController.m; sourceTree = "<group>"; };
+		29AEE446140036AE00730510 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FLMasterViewController_iPhone.xib; sourceTree = "<group>"; };
+		29AEE449140036AE00730510 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FLMasterViewController_iPad.xib; sourceTree = "<group>"; };
+		29AEE44C140036AE00730510 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FLDetailViewController_iPhone.xib; sourceTree = "<group>"; };
+		29AEE44F140036AE00730510 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FLDetailViewController_iPad.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		29AEE423140036AD00730510 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29AEE42B140036AE00730510 /* UIKit.framework in Frameworks */,
+				29AEE42D140036AE00730510 /* Foundation.framework in Frameworks */,
+				29AEE42F140036AE00730510 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		29AEE41B140036AD00730510 = {
+			isa = PBXGroup;
+			children = (
+				29AEE430140036AE00730510 /* FetLife */,
+				29AEE429140036AE00730510 /* Frameworks */,
+				29AEE427140036AE00730510 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		29AEE427140036AE00730510 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				29AEE426140036AE00730510 /* FetLife.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29AEE429140036AE00730510 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29AEE42A140036AE00730510 /* UIKit.framework */,
+				29AEE42C140036AE00730510 /* Foundation.framework */,
+				29AEE42E140036AE00730510 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		29AEE430140036AE00730510 /* FetLife */ = {
+			isa = PBXGroup;
+			children = (
+				29AEE439140036AE00730510 /* FLAppDelegate.h */,
+				29AEE43A140036AE00730510 /* FLAppDelegate.m */,
+				29AEE43F140036AE00730510 /* FLMasterViewController.h */,
+				29AEE440140036AE00730510 /* FLMasterViewController.m */,
+				29AEE442140036AE00730510 /* FLDetailViewController.h */,
+				29AEE443140036AE00730510 /* FLDetailViewController.m */,
+				29AEE445140036AE00730510 /* FLMasterViewController_iPhone.xib */,
+				29AEE448140036AE00730510 /* FLMasterViewController_iPad.xib */,
+				29AEE44B140036AE00730510 /* FLDetailViewController_iPhone.xib */,
+				29AEE44E140036AE00730510 /* FLDetailViewController_iPad.xib */,
+				29AEE43C140036AE00730510 /* FetLife.xcdatamodeld */,
+				29AEE431140036AE00730510 /* Supporting Files */,
+			);
+			path = FetLife;
+			sourceTree = "<group>";
+		};
+		29AEE431140036AE00730510 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				29AEE432140036AE00730510 /* FetLife-Info.plist */,
+				29AEE433140036AE00730510 /* InfoPlist.strings */,
+				29AEE436140036AE00730510 /* main.m */,
+				29AEE438140036AE00730510 /* FetLife-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		29AEE425140036AD00730510 /* FetLife */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29AEE453140036AE00730510 /* Build configuration list for PBXNativeTarget "FetLife" */;
+			buildPhases = (
+				29AEE422140036AD00730510 /* Sources */,
+				29AEE423140036AD00730510 /* Frameworks */,
+				29AEE424140036AD00730510 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FetLife;
+			productName = FetLife;
+			productReference = 29AEE426140036AE00730510 /* FetLife.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29AEE41D140036AD00730510 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 29AEE420140036AD00730510 /* Build configuration list for PBXProject "FetLife" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 29AEE41B140036AD00730510;
+			productRefGroup = 29AEE427140036AE00730510 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				29AEE425140036AD00730510 /* FetLife */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		29AEE424140036AD00730510 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29AEE435140036AE00730510 /* InfoPlist.strings in Resources */,
+				29AEE447140036AE00730510 /* FLMasterViewController_iPhone.xib in Resources */,
+				29AEE44A140036AE00730510 /* FLMasterViewController_iPad.xib in Resources */,
+				29AEE44D140036AE00730510 /* FLDetailViewController_iPhone.xib in Resources */,
+				29AEE450140036AE00730510 /* FLDetailViewController_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		29AEE422140036AD00730510 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29AEE437140036AE00730510 /* main.m in Sources */,
+				29AEE43B140036AE00730510 /* FLAppDelegate.m in Sources */,
+				29AEE43E140036AE00730510 /* FetLife.xcdatamodeld in Sources */,
+				29AEE441140036AE00730510 /* FLMasterViewController.m in Sources */,
+				29AEE444140036AE00730510 /* FLDetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		29AEE433140036AE00730510 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29AEE434140036AE00730510 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		29AEE445140036AE00730510 /* FLMasterViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29AEE446140036AE00730510 /* en */,
+			);
+			name = FLMasterViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		29AEE448140036AE00730510 /* FLMasterViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29AEE449140036AE00730510 /* en */,
+			);
+			name = FLMasterViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		29AEE44B140036AE00730510 /* FLDetailViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29AEE44C140036AE00730510 /* en */,
+			);
+			name = FLDetailViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		29AEE44E140036AE00730510 /* FLDetailViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29AEE44F140036AE00730510 /* en */,
+			);
+			name = FLDetailViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		29AEE451140036AE00730510 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		29AEE452140036AE00730510 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		29AEE454140036AE00730510 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FetLife/FetLife-Prefix.pch";
+				INFOPLIST_FILE = "FetLife/FetLife-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		29AEE455140036AE00730510 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FetLife/FetLife-Prefix.pch";
+				INFOPLIST_FILE = "FetLife/FetLife-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		29AEE420140036AD00730510 /* Build configuration list for PBXProject "FetLife" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29AEE451140036AE00730510 /* Debug */,
+				29AEE452140036AE00730510 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		29AEE453140036AE00730510 /* Build configuration list for PBXNativeTarget "FetLife" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29AEE454140036AE00730510 /* Debug */,
+				29AEE455140036AE00730510 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		29AEE43C140036AE00730510 /* FetLife.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				29AEE43D140036AE00730510 /* FetLife.xcdatamodel */,
+			);
+			currentVersion = 29AEE43D140036AE00730510 /* FetLife.xcdatamodel */;
+			path = FetLife.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 29AEE41D140036AD00730510 /* Project object */;
+}
