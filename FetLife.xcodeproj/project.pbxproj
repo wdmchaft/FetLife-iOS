@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		291A9B491400A43D001A299B /* i_heart_fetlife_57.png in Resources */ = {isa = PBXBuildFile; fileRef = 291A9B481400A43D001A299B /* i_heart_fetlife_57.png */; };
+		291A9B4B1400A510001A299B /* i_heart_fetlife_114.png in Resources */ = {isa = PBXBuildFile; fileRef = 291A9B4A1400A510001A299B /* i_heart_fetlife_114.png */; };
 		29AEE42B140036AE00730510 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29AEE42A140036AE00730510 /* UIKit.framework */; };
 		29AEE42D140036AE00730510 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29AEE42C140036AE00730510 /* Foundation.framework */; };
 		29AEE42F140036AE00730510 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29AEE42E140036AE00730510 /* CoreData.framework */; };
@@ -23,20 +25,23 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		291A9B461400962F001A299B /* FetLife.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = FetLife.entitlements; sourceTree = "<group>"; };
+		291A9B481400A43D001A299B /* i_heart_fetlife_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = i_heart_fetlife_57.png; sourceTree = "<group>"; };
+		291A9B4A1400A510001A299B /* i_heart_fetlife_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = i_heart_fetlife_114.png; sourceTree = "<group>"; };
 		29AEE426140036AE00730510 /* FetLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FetLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29AEE42A140036AE00730510 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		29AEE42C140036AE00730510 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		29AEE42E140036AE00730510 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		29AEE432140036AE00730510 /* FetLife-Info.plist */ = {isa = PBXFileReference; path = "FetLife-Info.plist"; sourceTree = "<group>"; };
+		29AEE432140036AE00730510 /* FetLife-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FetLife-Info.plist"; sourceTree = "<group>"; };
 		29AEE434140036AE00730510 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		29AEE436140036AE00730510 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		29AEE438140036AE00730510 /* FetLife-Prefix.pch */ = {isa = PBXFileReference; path = "FetLife-Prefix.pch"; sourceTree = "<group>"; };
-		29AEE439140036AE00730510 /* FLAppDelegate.h */ = {isa = PBXFileReference; path = FLAppDelegate.h; sourceTree = "<group>"; };
+		29AEE438140036AE00730510 /* FetLife-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FetLife-Prefix.pch"; sourceTree = "<group>"; };
+		29AEE439140036AE00730510 /* FLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FLAppDelegate.h; sourceTree = "<group>"; };
 		29AEE43A140036AE00730510 /* FLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FLAppDelegate.m; sourceTree = "<group>"; };
 		29AEE43D140036AE00730510 /* FetLife.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FetLife.xcdatamodel; sourceTree = "<group>"; };
-		29AEE43F140036AE00730510 /* FLMasterViewController.h */ = {isa = PBXFileReference; path = FLMasterViewController.h; sourceTree = "<group>"; };
+		29AEE43F140036AE00730510 /* FLMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FLMasterViewController.h; sourceTree = "<group>"; };
 		29AEE440140036AE00730510 /* FLMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FLMasterViewController.m; sourceTree = "<group>"; };
-		29AEE442140036AE00730510 /* FLDetailViewController.h */ = {isa = PBXFileReference; path = FLDetailViewController.h; sourceTree = "<group>"; };
+		29AEE442140036AE00730510 /* FLDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FLDetailViewController.h; sourceTree = "<group>"; };
 		29AEE443140036AE00730510 /* FLDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FLDetailViewController.m; sourceTree = "<group>"; };
 		29AEE446140036AE00730510 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FLMasterViewController_iPhone.xib; sourceTree = "<group>"; };
 		29AEE449140036AE00730510 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FLMasterViewController_iPad.xib; sourceTree = "<group>"; };
@@ -61,6 +66,8 @@
 		29AEE41B140036AD00730510 = {
 			isa = PBXGroup;
 			children = (
+				291A9B4A1400A510001A299B /* i_heart_fetlife_114.png */,
+				291A9B481400A43D001A299B /* i_heart_fetlife_57.png */,
 				29AEE430140036AE00730510 /* FetLife */,
 				29AEE429140036AE00730510 /* Frameworks */,
 				29AEE427140036AE00730510 /* Products */,
@@ -88,6 +95,7 @@
 		29AEE430140036AE00730510 /* FetLife */ = {
 			isa = PBXGroup;
 			children = (
+				291A9B461400962F001A299B /* FetLife.entitlements */,
 				29AEE439140036AE00730510 /* FLAppDelegate.h */,
 				29AEE43A140036AE00730510 /* FLAppDelegate.m */,
 				29AEE43F140036AE00730510 /* FLMasterViewController.h */,
@@ -170,6 +178,8 @@
 				29AEE44A140036AE00730510 /* FLMasterViewController_iPad.xib in Resources */,
 				29AEE44D140036AE00730510 /* FLDetailViewController_iPhone.xib in Resources */,
 				29AEE450140036AE00730510 /* FLDetailViewController_iPad.xib in Resources */,
+				291A9B491400A43D001A299B /* i_heart_fetlife_57.png in Resources */,
+				291A9B4B1400A510001A299B /* i_heart_fetlife_114.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,9 +294,11 @@
 		29AEE454140036AE00730510 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = FetLife/FetLife.entitlements;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FetLife/FetLife-Prefix.pch";
 				INFOPLIST_FILE = "FetLife/FetLife-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -295,9 +307,11 @@
 		29AEE455140036AE00730510 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = FetLife/FetLife.entitlements;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FetLife/FetLife-Prefix.pch";
 				INFOPLIST_FILE = "FetLife/FetLife-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -322,6 +336,7 @@
 				29AEE455140036AE00730510 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
