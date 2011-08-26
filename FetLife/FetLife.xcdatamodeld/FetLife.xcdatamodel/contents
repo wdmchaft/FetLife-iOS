@@ -1,9 +1,61 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="864" systemVersion="11C37" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Conversations">
+        <attribute name="archive_url" optional="YES" attributeType="String"/>
+        <attribute name="archived" optional="YES" attributeType="Boolean"/>
+        <attribute name="delete_url" optional="YES" attributeType="String"/>
+        <attribute name="deletion_token" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0"/>
+        <attribute name="last_message_timestamp" optional="YES" attributeType="Date"/>
+        <attribute name="mark_as_unread_url" optional="YES" attributeType="String"/>
+        <attribute name="new_message_count" optional="YES" attributeType="Integer 32" defaultValueString="0"/>
+        <attribute name="subject" optional="YES" attributeType="String"/>
+        <attribute name="unarchive_url" optional="YES" attributeType="String"/>
+        <attribute name="update_url" optional="YES" attributeType="String"/>
+        <relationship name="messages" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Messages" inverseName="conversation" inverseEntity="Messages"/>
+        <relationship name="with_user" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Users" inverseName="conversations" inverseEntity="Users"/>
+    </entity>
     <entity name="Event">
         <attribute name="timeStamp" optional="YES" attributeType="Date"/>
     </entity>
+    <entity name="Groups"/>
+    <entity name="Messages">
+        <attribute name="body" optional="YES" attributeType="String"/>
+        <attribute name="created_at" optional="YES" attributeType="Date"/>
+        <attribute name="stripped_body" optional="YES" attributeType="String"/>
+        <attribute name="unread" optional="YES" attributeType="Boolean"/>
+        <relationship name="conversation" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Conversations" inverseName="messages" inverseEntity="Conversations"/>
+        <relationship name="sender" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Users" inverseName="messages" inverseEntity="Users"/>
+    </entity>
+    <entity name="Session">
+        <attribute name="session_id" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Users">
+        <attribute name="age" optional="YES" attributeType="Integer 16" defaultValueString="0"/>
+        <attribute name="gender" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0"/>
+        <attribute name="location" optional="YES" attributeType="String"/>
+        <attribute name="medium_avatar_url" optional="YES" attributeType="String"/>
+        <attribute name="mini_avatar_url" optional="YES" attributeType="String"/>
+        <attribute name="new_conversation_url" optional="YES" attributeType="String"/>
+        <attribute name="new_wall_post_url" optional="YES" attributeType="String"/>
+        <attribute name="nickname" optional="YES" attributeType="String"/>
+        <attribute name="pictures_url" optional="YES" attributeType="String"/>
+        <attribute name="posts_url" optional="YES" attributeType="String"/>
+        <attribute name="profile_url" optional="YES" attributeType="String"/>
+        <attribute name="role" optional="YES" attributeType="String"/>
+        <attribute name="small_avatar_url" optional="YES" attributeType="String"/>
+        <attribute name="supporter_badge" optional="YES" attributeType="Boolean"/>
+        <attribute name="videos_url" optional="YES" attributeType="String"/>
+        <relationship name="conversations" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Conversations" inverseName="with_user" inverseEntity="Conversations"/>
+        <relationship name="messages" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Messages" inverseName="sender" inverseEntity="Messages"/>
+    </entity>
     <elements>
+        <element name="Conversations" positionX="160" positionY="192" width="128" height="240"/>
         <element name="Event" positionX="261" positionY="189" width="128" height="60"/>
+        <element name="Groups" positionX="160" positionY="192" width="128" height="45"/>
+        <element name="Messages" positionX="160" positionY="192" width="128" height="120"/>
+        <element name="Session" positionX="160" positionY="192" width="128" height="60"/>
+        <element name="Users" positionX="160" positionY="192" width="128" height="300"/>
     </elements>
 </model>

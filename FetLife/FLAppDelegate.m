@@ -12,6 +12,8 @@
 
 #import "FLDetailViewController.h"
 
+#import "FLLoginViewController.h"
+
 @implementation FLAppDelegate
 
 @synthesize window = _window;
@@ -46,6 +48,7 @@
         masterViewController.managedObjectContext = self.managedObjectContext;
     }
     [self.window makeKeyAndVisible];
+    [NSThread detachNewThreadSelector:@selector(initializeDatabase) toTarget:self withObject:nil];
     return YES;
 }
 
