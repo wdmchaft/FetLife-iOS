@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		290C0F751404842400D43E0C /* FLLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 290C0F731404842400D43E0C /* FLLoginViewController.m */; };
+		290C0F761404842400D43E0C /* FLLoginViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 290C0F741404842400D43E0C /* FLLoginViewController_iPad.xib */; };
+		290C0F79140487CD00D43E0C /* FLLoginViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 290C0F77140487CD00D43E0C /* FLLoginViewController_iPhone.xib */; };
 		291A9B491400A43D001A299B /* i_heart_fetlife_57.png in Resources */ = {isa = PBXBuildFile; fileRef = 291A9B481400A43D001A299B /* i_heart_fetlife_57.png */; };
 		291A9B4B1400A510001A299B /* i_heart_fetlife_114.png in Resources */ = {isa = PBXBuildFile; fileRef = 291A9B4A1400A510001A299B /* i_heart_fetlife_114.png */; };
+		291A9BA11400C1F8001A299B /* libsbjson-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 291A9B9E1400C131001A299B /* libsbjson-ios.a */; };
+		2964BF7814073D47003AAB45 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2964BF7714073D47003AAB45 /* Settings.bundle */; };
 		29AEE42B140036AE00730510 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29AEE42A140036AE00730510 /* UIKit.framework */; };
 		29AEE42D140036AE00730510 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29AEE42C140036AE00730510 /* Foundation.framework */; };
 		29AEE42F140036AE00730510 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29AEE42E140036AE00730510 /* CoreData.framework */; };
@@ -22,12 +27,57 @@
 		29AEE44A140036AE00730510 /* FLMasterViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29AEE448140036AE00730510 /* FLMasterViewController_iPad.xib */; };
 		29AEE44D140036AE00730510 /* FLDetailViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29AEE44B140036AE00730510 /* FLDetailViewController_iPhone.xib */; };
 		29AEE450140036AE00730510 /* FLDetailViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29AEE44E140036AE00730510 /* FLDetailViewController_iPad.xib */; };
+		29DC72C9140820750078A3D6 /* FLNetworkController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29DC72C8140820750078A3D6 /* FLNetworkController.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		291A9B991400C131001A299B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 291A9B921400C131001A299B /* SBJson.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BC12323D1391D5CC00131607;
+			remoteInfo = SBJson;
+		};
+		291A9B9B1400C131001A299B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 291A9B921400C131001A299B /* SBJson.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BC1232521391D5CC00131607;
+			remoteInfo = SBJsonTests;
+		};
+		291A9B9D1400C131001A299B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 291A9B921400C131001A299B /* SBJson.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BCC2626913920FC7003D9994;
+			remoteInfo = "sbjson-ios";
+		};
+		291A9B9F1400C131001A299B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 291A9B921400C131001A299B /* SBJson.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BCC2627313920FC7003D9994;
+			remoteInfo = "sbjson-iosTests";
+		};
+		291A9BC91400C8DE001A299B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 291A9B921400C131001A299B /* SBJson.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BCC2626813920FC7003D9994;
+			remoteInfo = "sbjson-ios";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		290C0F721404842400D43E0C /* FLLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLLoginViewController.h; sourceTree = "<group>"; };
+		290C0F731404842400D43E0C /* FLLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLLoginViewController.m; sourceTree = "<group>"; };
+		290C0F741404842400D43E0C /* FLLoginViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FLLoginViewController_iPad.xib; sourceTree = "<group>"; };
+		290C0F78140487CD00D43E0C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FLLoginViewController_iPhone.xib; sourceTree = "<group>"; };
 		291A9B461400962F001A299B /* FetLife.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = FetLife.entitlements; sourceTree = "<group>"; };
 		291A9B481400A43D001A299B /* i_heart_fetlife_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = i_heart_fetlife_57.png; sourceTree = "<group>"; };
 		291A9B4A1400A510001A299B /* i_heart_fetlife_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = i_heart_fetlife_114.png; sourceTree = "<group>"; };
+		291A9B921400C131001A299B /* SBJson.xcodeproj */ = {isa = PBXFileReference; explicitFileType = "wrapper.pb-project"; name = SBJson.xcodeproj; path = "../json-framework/SBJson.xcodeproj"; sourceTree = "<group>"; };
+		2964BF7714073D47003AAB45 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		29AEE426140036AE00730510 /* FetLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FetLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29AEE42A140036AE00730510 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		29AEE42C140036AE00730510 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -47,6 +97,8 @@
 		29AEE449140036AE00730510 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FLMasterViewController_iPad.xib; sourceTree = "<group>"; };
 		29AEE44C140036AE00730510 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FLDetailViewController_iPhone.xib; sourceTree = "<group>"; };
 		29AEE44F140036AE00730510 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FLDetailViewController_iPad.xib; sourceTree = "<group>"; };
+		29DC72C7140820750078A3D6 /* FLNetworkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLNetworkController.h; sourceTree = "<group>"; };
+		29DC72C8140820750078A3D6 /* FLNetworkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLNetworkController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				291A9BA11400C1F8001A299B /* libsbjson-ios.a in Frameworks */,
 				29AEE42B140036AE00730510 /* UIKit.framework in Frameworks */,
 				29AEE42D140036AE00730510 /* Foundation.framework in Frameworks */,
 				29AEE42F140036AE00730510 /* CoreData.framework in Frameworks */,
@@ -63,9 +116,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		291A9B931400C131001A299B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				291A9B9A1400C131001A299B /* SBJson.framework */,
+				291A9B9C1400C131001A299B /* SBJsonTests.octest */,
+				291A9B9E1400C131001A299B /* libsbjson-ios.a */,
+				291A9BA01400C131001A299B /* sbjson-iosTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		29AEE41B140036AD00730510 = {
 			isa = PBXGroup;
 			children = (
+				291A9B921400C131001A299B /* SBJson.xcodeproj */,
 				291A9B4A1400A510001A299B /* i_heart_fetlife_114.png */,
 				291A9B481400A43D001A299B /* i_heart_fetlife_57.png */,
 				29AEE430140036AE00730510 /* FetLife */,
@@ -95,9 +160,14 @@
 		29AEE430140036AE00730510 /* FetLife */ = {
 			isa = PBXGroup;
 			children = (
+				290C0F721404842400D43E0C /* FLLoginViewController.h */,
+				290C0F731404842400D43E0C /* FLLoginViewController.m */,
 				291A9B461400962F001A299B /* FetLife.entitlements */,
 				29AEE439140036AE00730510 /* FLAppDelegate.h */,
 				29AEE43A140036AE00730510 /* FLAppDelegate.m */,
+				29DC72C7140820750078A3D6 /* FLNetworkController.h */,
+				29DC72C8140820750078A3D6 /* FLNetworkController.m */,
+				2964BF7714073D47003AAB45 /* Settings.bundle */,
 				29AEE43F140036AE00730510 /* FLMasterViewController.h */,
 				29AEE440140036AE00730510 /* FLMasterViewController.m */,
 				29AEE442140036AE00730510 /* FLDetailViewController.h */,
@@ -106,6 +176,8 @@
 				29AEE448140036AE00730510 /* FLMasterViewController_iPad.xib */,
 				29AEE44B140036AE00730510 /* FLDetailViewController_iPhone.xib */,
 				29AEE44E140036AE00730510 /* FLDetailViewController_iPad.xib */,
+				290C0F741404842400D43E0C /* FLLoginViewController_iPad.xib */,
+				290C0F77140487CD00D43E0C /* FLLoginViewController_iPhone.xib */,
 				29AEE43C140036AE00730510 /* FetLife.xcdatamodeld */,
 				29AEE431140036AE00730510 /* Supporting Files */,
 			);
@@ -137,6 +209,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				291A9BCA1400C8DE001A299B /* PBXTargetDependency */,
 			);
 			name = FetLife;
 			productName = FetLife;
@@ -150,6 +223,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = KB1IBT.com;
 			};
 			buildConfigurationList = 29AEE420140036AD00730510 /* Build configuration list for PBXProject "FetLife" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -161,12 +235,49 @@
 			mainGroup = 29AEE41B140036AD00730510;
 			productRefGroup = 29AEE427140036AE00730510 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 291A9B931400C131001A299B /* Products */;
+					ProjectRef = 291A9B921400C131001A299B /* SBJson.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				29AEE425140036AD00730510 /* FetLife */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		291A9B9A1400C131001A299B /* SBJson.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SBJson.framework;
+			remoteRef = 291A9B991400C131001A299B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		291A9B9C1400C131001A299B /* SBJsonTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SBJsonTests.octest;
+			remoteRef = 291A9B9B1400C131001A299B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		291A9B9E1400C131001A299B /* libsbjson-ios.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libsbjson-ios.a";
+			remoteRef = 291A9B9D1400C131001A299B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		291A9BA01400C131001A299B /* sbjson-iosTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "sbjson-iosTests.octest";
+			remoteRef = 291A9B9F1400C131001A299B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		29AEE424140036AD00730510 /* Resources */ = {
@@ -180,6 +291,9 @@
 				29AEE450140036AE00730510 /* FLDetailViewController_iPad.xib in Resources */,
 				291A9B491400A43D001A299B /* i_heart_fetlife_57.png in Resources */,
 				291A9B4B1400A510001A299B /* i_heart_fetlife_114.png in Resources */,
+				290C0F761404842400D43E0C /* FLLoginViewController_iPad.xib in Resources */,
+				290C0F79140487CD00D43E0C /* FLLoginViewController_iPhone.xib in Resources */,
+				2964BF7814073D47003AAB45 /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,12 +309,30 @@
 				29AEE43E140036AE00730510 /* FetLife.xcdatamodeld in Sources */,
 				29AEE441140036AE00730510 /* FLMasterViewController.m in Sources */,
 				29AEE444140036AE00730510 /* FLDetailViewController.m in Sources */,
+				290C0F751404842400D43E0C /* FLLoginViewController.m in Sources */,
+				29DC72C9140820750078A3D6 /* FLNetworkController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		291A9BCA1400C8DE001A299B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "sbjson-ios";
+			targetProxy = 291A9BC91400C8DE001A299B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		290C0F77140487CD00D43E0C /* FLLoginViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				290C0F78140487CD00D43E0C /* en */,
+			);
+			name = FLLoginViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
 		29AEE433140036AE00730510 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
