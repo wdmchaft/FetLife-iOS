@@ -7,8 +7,10 @@
 //
 
 #import "FLLoginViewController.h"
+#import "FLNetworkController.h"
 
 @implementation FLLoginViewController
+@synthesize password, username;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -46,6 +48,9 @@
 {
     // Return YES for supported orientations
 	return YES;
+}
+-(IBAction)login:(id)sender{
+    [FLNetworkController loginWithUsername:[self.username text] withPassword:[self.password text]];
 }
 
 @end
