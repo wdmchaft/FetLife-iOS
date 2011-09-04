@@ -14,6 +14,8 @@
 
 #import "FLLoginViewController.h"
 
+#import "FLNetworkController.h"
+
 @implementation FLAppDelegate
 
 @synthesize window = _window;
@@ -48,7 +50,18 @@
         masterViewController.managedObjectContext = self.managedObjectContext;
     }
     [self.window makeKeyAndVisible];
-    [NSThread detachNewThreadSelector:@selector(initializeDatabase) toTarget:self withObject:nil];
+
+    if (![FLNetworkController loggedIn]) {
+        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+            FLLoginViewController *loginView = [[FLLoginViewController alloc] initWithNibName:@"FLLoginViewController_iPhone" bundle:nil];
+            [self.window.rootViewController presentModalViewController:loginView animated:YES];
+        }else{
+            FLLoginViewController *loginView = [[FLLoginViewController alloc] initWithNibName:@"FLLoginViewController_iPad" bundle:nil];
+            loginView.modalPresentationStyle = UIModalPresentationFormSheet;
+            loginView.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+            [self.window.rootViewController presentModalViewController:loginView animated:YES];
+        }
+    }
     return YES;
 }
 
@@ -77,9 +90,16 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
-    /*
-     Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-     */
+    [[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookieAcceptPolicy:NSHTTPCookieAcceptPolicyAlways];
+    NSData *cookiesdata = [[NSUserDefaults standardUserDefaults] objectForKey:@"FetLifeCookies"];
+    if([cookiesdata length]) {
+        NSArray *cookies = [NSKeyedUnarchiver unarchiveObjectWithData:cookiesdata];
+        NSHTTPCookie *cookie;
+        
+        for (cookie in cookies) {
+            [[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookie:cookie];
+        }
+    }
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
