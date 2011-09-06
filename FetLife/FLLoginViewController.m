@@ -34,7 +34,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)viewDidUnload
@@ -49,8 +48,19 @@
     // Return YES for supported orientations
 	return YES;
 }
+
 -(IBAction)login:(id)sender{
     [FLNetworkController loginWithUsername:[self.username text] withPassword:[self.password text]];
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    if (textField == password)
+    {
+        NSLog(@"password box");
+    }
+	NSLog(@"should return");
+	[textField resignFirstResponder];
+	return YES;
+}
 @end

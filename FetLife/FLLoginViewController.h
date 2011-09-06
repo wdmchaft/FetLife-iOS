@@ -12,7 +12,6 @@
 
 @property (strong, nonatomic) IBOutlet UITextField *username;
 @property (strong, nonatomic) IBOutlet UITextField *password;
-
 - (IBAction)login:(id)sender;
-
+- (BOOL)textFieldShouldReturn:(UITextField *)textField;
 @end
