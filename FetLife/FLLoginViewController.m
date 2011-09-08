@@ -50,7 +50,10 @@
 }
 
 -(IBAction)login:(id)sender{
-    [FLNetworkController loginWithUsername:[self.username text] withPassword:[self.password text]];
+    if ([FLNetworkController loginWithUsername:[self.username text] withPassword:[self.password text]])
+    {
+        [self dismissModalViewControllerAnimated:YES];
+    }
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -59,7 +62,6 @@
     {
         NSLog(@"password box");
     }
-	NSLog(@"should return");
 	[textField resignFirstResponder];
 	return YES;
 }
