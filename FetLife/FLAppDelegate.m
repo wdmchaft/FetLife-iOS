@@ -51,17 +51,6 @@
     }
     [self.window makeKeyAndVisible];
 
-    if (![FLNetworkController loggedIn]) {
-        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-            FLLoginViewController *loginView = [[FLLoginViewController alloc] initWithNibName:@"FLLoginViewController_iPhone" bundle:nil];
-            [self.window.rootViewController presentModalViewController:loginView animated:YES];
-        }else{
-            FLLoginViewController *loginView = [[FLLoginViewController alloc] initWithNibName:@"FLLoginViewController_iPad" bundle:nil];
-            loginView.modalPresentationStyle = UIModalPresentationFormSheet;
-            loginView.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-            [self.window.rootViewController presentModalViewController:loginView animated:YES];
-        }
-    }
     return YES;
 }
 
@@ -100,6 +89,18 @@
             [[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookie:cookie];
         }
     }
+    if (![FLNetworkController loggedIn]) {
+        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+            FLLoginViewController *loginView = [[FLLoginViewController alloc] initWithNibName:@"FLLoginViewController_iPhone" bundle:nil];
+            [self.window.rootViewController presentModalViewController:loginView animated:YES];
+        }else{
+            FLLoginViewController *loginView = [[FLLoginViewController alloc] initWithNibName:@"FLLoginViewController_iPad" bundle:nil];
+            loginView.modalPresentationStyle = UIModalPresentationFormSheet;
+            loginView.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+            [self.window.rootViewController presentModalViewController:loginView animated:YES];
+        }
+    }
+
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
