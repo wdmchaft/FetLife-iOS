@@ -20,17 +20,18 @@
     UIWebView *webView = [[UIWebView alloc] init];
     NSString *ua = [webView stringByEvaluatingJavaScriptFromString:@"navigator.userAgent"];
     NSMutableURLRequest *request= [[NSMutableURLRequest alloc] init];
-    [request setURL:[NSURL URLWithString:@"https://fetlife.com/session"]];
+    [request setURL:[NSURL URLWithString:@"https://fetlife.com/login"]];
     [request setHTTPMethod:@"GET"];
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-type"];
     [request setValue: ua forHTTPHeaderField: @"User-Agent"];
 
     NSHTTPURLResponse *theResponse =[[NSHTTPURLResponse alloc]init];
     NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&theResponse error:&theError];
-    if (theResponse.statusCode == 500) {
-        return NO;
+    NSString *location = [[theResponse allHeaderFields] objectForKey:@"Location"];
+    if ([location isEqualToString:@"https://fetlife.com/home"]) {
+        return YES;
     }
-    return YES;
+    return NO;
 }
 
 +(BOOL) loginWithUsername:(NSString *)username withPassword:(NSString *)password {
@@ -59,11 +60,11 @@
     
     NSHTTPURLResponse *theResponse =[[NSHTTPURLResponse alloc]init];
     NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&theResponse error:&theError];
-
-    if (theResponse.statusCode!=200) {
-        return NO;
+    NSString *location = [[theResponse allHeaderFields] objectForKey:@"Location"];
+    if ([location isEqualToString:@"https://fetlife.com/home"]) {
+        return YES;
     }
-    return YES;
+    return NO;
 }
 
 @end
