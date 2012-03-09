@@ -15,6 +15,7 @@
 #import "FLLoginViewController.h"
 
 #import "FLNetworkController.h"
+#import <RestKit/RestKit.h>
 
 @implementation FLAppDelegate
 
@@ -27,6 +28,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    RKClient *client = [RKClient clientWithBaseURL:@"https://fetlife.com"];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
