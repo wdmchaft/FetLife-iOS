@@ -7,15 +7,10 @@
 //
 
 #import "FLNetworkController.h"
-#import <SBJson/SBJson.h>
-
-@class SBJsonParser;
-@class SBJsonWriter;
 
 @implementation FLNetworkController
 
 +(BOOL) loggedIn {
-    SBJsonParser *_parser = [[SBJsonParser alloc] init];
     NSError *theError = nil;
     UIWebView *webView = [[UIWebView alloc] init];
     NSString *ua = [webView stringByEvaluatingJavaScriptFromString:@"navigator.userAgent"];
@@ -35,16 +30,13 @@
 }
 
 +(BOOL) loginWithUsername:(NSString *)username withPassword:(NSString *)password {
-    SBJsonParser *_parser = [[SBJsonParser alloc] init];
-    SBJsonWriter *_writer = [[SBJsonWriter alloc] init];
-    _writer.sortKeys = YES;
     UIWebView *webView = [[UIWebView alloc] init];
     NSString *ua = [webView stringByEvaluatingJavaScriptFromString:@"navigator.userAgent"];
     NSError *theError = nil;
     NSArray *keys = [NSArray arrayWithObjects:@"nickname_or_email", @"password", @"commit", nil];
     NSArray *objects = [NSArray arrayWithObjects:username, password, @"Login to FetLife", nil];
     NSDictionary *jsonDictionary = [NSDictionary dictionaryWithObjects:objects forKeys:keys];
-    NSString *jsonString = [_writer stringWithObject:jsonDictionary];
+    NSString *jsonString = nil;
     NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
 
     
