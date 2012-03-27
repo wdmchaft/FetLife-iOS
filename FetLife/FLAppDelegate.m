@@ -12,7 +12,6 @@
 
 #import "FLDetailViewController.h"
 
-#import "FLLoginViewController.h"
 
 #import "FLNetworkController.h"
 #import <RestKit/RestKit.h>
@@ -52,7 +51,6 @@
         masterViewController.managedObjectContext = self.managedObjectContext;
     }
     [self.window makeKeyAndVisible];
-
     return YES;
 }
 
@@ -82,27 +80,6 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     [[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookieAcceptPolicy:NSHTTPCookieAcceptPolicyAlways];
-    NSData *cookiesdata = [[NSUserDefaults standardUserDefaults] objectForKey:@"FetLifeCookies"];
-    if([cookiesdata length]) {
-        NSArray *cookies = [NSKeyedUnarchiver unarchiveObjectWithData:cookiesdata];
-        NSHTTPCookie *cookie;
-        
-        for (cookie in cookies) {
-            [[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookie:cookie];
-        }
-    }
-    if (![FLNetworkController loggedIn]) {
-        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-            FLLoginViewController *loginView = [[FLLoginViewController alloc] initWithNibName:@"FLLoginViewController_iPhone" bundle:nil];
-            [self.window.rootViewController presentModalViewController:loginView animated:YES];
-        }else{
-            FLLoginViewController *loginView = [[FLLoginViewController alloc] initWithNibName:@"FLLoginViewController_iPad" bundle:nil];
-            loginView.modalPresentationStyle = UIModalPresentationFormSheet;
-            loginView.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-            [self.window.rootViewController presentModalViewController:loginView animated:YES];
-        }
-    }
-
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application

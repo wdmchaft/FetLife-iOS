@@ -20,7 +20,7 @@
 - (NSURL *)applicationDocumentsDirectory;
 
 @property (strong, nonatomic) UINavigationController *navigationController;
-
+@property (strong, nonatomic) NSURL *fetlifeURL;
 @property (strong, nonatomic) UISplitViewController *splitViewController;
 
 @end

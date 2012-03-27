@@ -6,9 +6,13 @@
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
+#import "FLAppDelegate.h"
 #import "FLMasterViewController.h"
 
+#import "FLNetworkController.h"
+
 #import "FLDetailViewController.h"
+#import "FLLoginViewController.h"
 
 @interface FLMasterViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
@@ -67,6 +71,17 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    if (![FLNetworkController loggedIn]) {
+        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+            FLLoginViewController *loginView = [[FLLoginViewController alloc] initWithNibName:@"FLLoginViewController_iPhone" bundle:nil];
+            [[[(FLAppDelegate *)[[UIApplication sharedApplication] delegate] window] rootViewController] presentModalViewController:loginView animated:YES];
+        }else{
+            FLLoginViewController *loginView = [[FLLoginViewController alloc] initWithNibName:@"FLLoginViewController_iPad" bundle:nil];
+            loginView.modalPresentationStyle = UIModalPresentationFormSheet;
+            loginView.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+            [[[(FLAppDelegate *)[[UIApplication sharedApplication] delegate] window] rootViewController] presentModalViewController:loginView animated:YES];
+        }
+    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated

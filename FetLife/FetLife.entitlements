@@ -6,8 +6,6 @@
 	<array>
 		<string>$(TeamIdentifierPrefix)com.kb1ibt.FetLife</string>
 	</array>
-	<key>com.apple.developer.ubiquity-kvstore-identifier</key>
-	<string>$(TeamIdentifierPrefix)com.kb1ibt.FetLife</string>
 	<key>keychain-access-groups</key>
 	<array>
 		<string>$(AppIdentifierPrefix)com.kb1ibt.FetLife</string>
