@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		290C0F751404842400D43E0C /* FLLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 290C0F731404842400D43E0C /* FLLoginViewController.m */; };
-		290C0F761404842400D43E0C /* FLLoginViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 290C0F741404842400D43E0C /* FLLoginViewController_iPad.xib */; };
-		290C0F79140487CD00D43E0C /* FLLoginViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 290C0F77140487CD00D43E0C /* FLLoginViewController_iPhone.xib */; };
-		2912B08A1509C41200B15EE3 /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2912B0811509C32600B15EE3 /* libRestKit.a */; };
 		2912B0901509C46300B15EE3 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2912B08B1509C46300B15EE3 /* CFNetwork.framework */; };
 		2912B0911509C46300B15EE3 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2912B08C1509C46300B15EE3 /* libxml2.dylib */; };
 		2912B0921509C46300B15EE3 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2912B08D1509C46300B15EE3 /* MobileCoreServices.framework */; };
@@ -18,6 +14,11 @@
 		2912B0941509C46300B15EE3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2912B08F1509C46300B15EE3 /* SystemConfiguration.framework */; };
 		291A9B491400A43D001A299B /* i_heart_fetlife_57.png in Resources */ = {isa = PBXBuildFile; fileRef = 291A9B481400A43D001A299B /* i_heart_fetlife_57.png */; };
 		291A9B4B1400A510001A299B /* i_heart_fetlife_114.png in Resources */ = {isa = PBXBuildFile; fileRef = 291A9B4A1400A510001A299B /* i_heart_fetlife_114.png */; };
+		29580EC7155CA5B100431E20 /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29A78883155CA1FD00E820E7 /* libRestKit.a */; };
+		29580ED2155CB05200431E20 /* HTMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 29580ECF155CB05200431E20 /* HTMLNode.m */; };
+		29580ED3155CB05200431E20 /* HTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 29580ED1155CB05200431E20 /* HTMLParser.m */; };
+		29580ED5155CB19C00431E20 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29580ED4155CB19C00431E20 /* CoreGraphics.framework */; };
+		29580ED6155CB20B00431E20 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2916B0C2153FB9A20050618F /* QuartzCore.framework */; };
 		2964BF7814073D47003AAB45 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2964BF7714073D47003AAB45 /* Settings.bundle */; };
 		29AEE42B140036AE00730510 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29AEE42A140036AE00730510 /* UIKit.framework */; };
 		29AEE42D140036AE00730510 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29AEE42C140036AE00730510 /* Foundation.framework */; };
@@ -36,40 +37,50 @@
 		29D4792814187D0300B7F4D0 /* FLMessages.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D4792714187D0300B7F4D0 /* FLMessages.m */; };
 		29D4792B14187D0300B7F4D0 /* FLUsers.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D4792A14187D0300B7F4D0 /* FLUsers.m */; };
 		29DC72C9140820750078A3D6 /* FLNetworkController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29DC72C8140820750078A3D6 /* FLNetworkController.m */; };
+		29F55E3B15118EC400A70306 /* FLLoginViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29F55E2E15118EC400A70306 /* FLLoginViewController_iPhone.xib */; };
+		29F55E3F15118EC400A70306 /* FLLoginViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29F55E3615118EC400A70306 /* FLLoginViewController_iPad.xib */; };
+		29F55E4015118EC400A70306 /* FLLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29F55E3815118EC400A70306 /* FLLoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2912B0801509C32600B15EE3 /* PBXContainerItemProxy */ = {
+		29A78882155CA1FD00E820E7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2912B0761509C32600B15EE3 /* RestKit.xcodeproj */;
+			containerPortal = 29E9AD19155B57F300EC722B /* RestKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 25160D1614564E810060A5C5;
 			remoteInfo = RestKit;
 		};
-		2912B0821509C32600B15EE3 /* PBXContainerItemProxy */ = {
+		29A78884155CA1FD00E820E7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2912B0761509C32600B15EE3 /* RestKit.xcodeproj */;
+			containerPortal = 29E9AD19155B57F300EC722B /* RestKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 25160D2614564E820060A5C5;
 			remoteInfo = RestKitTests;
 		};
-		2912B0841509C32600B15EE3 /* PBXContainerItemProxy */ = {
+		29A78886155CA1FD00E820E7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2912B0761509C32600B15EE3 /* RestKit.xcodeproj */;
+			containerPortal = 29E9AD19155B57F300EC722B /* RestKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 25160E62145651060060A5C5;
 			remoteInfo = RestKitFramework;
 		};
-		2912B0861509C32600B15EE3 /* PBXContainerItemProxy */ = {
+		29A78888155CA1FD00E820E7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2912B0761509C32600B15EE3 /* RestKit.xcodeproj */;
+			containerPortal = 29E9AD19155B57F300EC722B /* RestKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 25160E78145651060060A5C5;
 			remoteInfo = RestKitFrameworkTests;
 		};
-		2912B0881509C3F400B15EE3 /* PBXContainerItemProxy */ = {
+		29A7888A155CA1FD00E820E7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2912B0761509C32600B15EE3 /* RestKit.xcodeproj */;
+			containerPortal = 29E9AD19155B57F300EC722B /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 259C301615128079003066A2;
+			remoteInfo = RestKitResources;
+		};
+		29E9AD2E155B580200EC722B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29E9AD19155B57F300EC722B /* RestKit.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 25160D1514564E810060A5C5;
 			remoteInfo = RestKit;
@@ -77,19 +88,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		290C0F721404842400D43E0C /* FLLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLLoginViewController.h; sourceTree = "<group>"; };
-		290C0F731404842400D43E0C /* FLLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLLoginViewController.m; sourceTree = "<group>"; };
-		290C0F741404842400D43E0C /* FLLoginViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FLLoginViewController_iPad.xib; sourceTree = "<group>"; };
-		290C0F78140487CD00D43E0C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FLLoginViewController_iPhone.xib; sourceTree = "<group>"; };
-		2912B0761509C32600B15EE3 /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = RestKit/RestKit.xcodeproj; sourceTree = "<group>"; };
 		2912B08B1509C46300B15EE3 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		2912B08C1509C46300B15EE3 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		2912B08D1509C46300B15EE3 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		2912B08E1509C46300B15EE3 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		2912B08F1509C46300B15EE3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		2916B0C2153FB9A20050618F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		291A9B461400962F001A299B /* FetLife.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = FetLife.entitlements; sourceTree = "<group>"; };
 		291A9B481400A43D001A299B /* i_heart_fetlife_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = i_heart_fetlife_57.png; sourceTree = "<group>"; };
 		291A9B4A1400A510001A299B /* i_heart_fetlife_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = i_heart_fetlife_114.png; sourceTree = "<group>"; };
+		291CBB1C151010E900130A2A /* en */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = en; path = en.lproj/FetLifeLoginWebView.h; sourceTree = "<group>"; };
+		291CBB1E151010E900130A2A /* en */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = en; path = en.lproj/FetLifeLoginWebView.m; sourceTree = "<group>"; };
+		29580ECE155CB05200431E20 /* HTMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLNode.h; sourceTree = "<group>"; };
+		29580ECF155CB05200431E20 /* HTMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLNode.m; sourceTree = "<group>"; };
+		29580ED0155CB05200431E20 /* HTMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLParser.h; sourceTree = "<group>"; };
+		29580ED1155CB05200431E20 /* HTMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLParser.m; sourceTree = "<group>"; };
+		29580ED4155CB19C00431E20 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		2964BF7714073D47003AAB45 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		29AEE426140036AE00730510 /* FetLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FetLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29AEE42A140036AE00730510 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -118,6 +132,11 @@
 		29D4792A14187D0300B7F4D0 /* FLUsers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLUsers.m; sourceTree = "<group>"; };
 		29DC72C7140820750078A3D6 /* FLNetworkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLNetworkController.h; sourceTree = "<group>"; };
 		29DC72C8140820750078A3D6 /* FLNetworkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLNetworkController.m; sourceTree = "<group>"; };
+		29E9AD19155B57F300EC722B /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = RestKit/RestKit.xcodeproj; sourceTree = "<group>"; };
+		29F55E2F15118EC400A70306 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = FLLoginViewController_iPhone.xib; sourceTree = "<group>"; };
+		29F55E3615118EC400A70306 /* FLLoginViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FLLoginViewController_iPad.xib; sourceTree = "<group>"; };
+		29F55E3715118EC400A70306 /* FLLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLLoginViewController.h; sourceTree = "<group>"; };
+		29F55E3815118EC400A70306 /* FLLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLLoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,41 +144,34 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2912B0901509C46300B15EE3 /* CFNetwork.framework in Frameworks */,
+				29580ED6155CB20B00431E20 /* QuartzCore.framework in Frameworks */,
+				29580EC7155CA5B100431E20 /* libRestKit.a in Frameworks */,
 				2912B0911509C46300B15EE3 /* libxml2.dylib in Frameworks */,
-				2912B0921509C46300B15EE3 /* MobileCoreServices.framework in Frameworks */,
-				2912B0931509C46300B15EE3 /* Security.framework in Frameworks */,
 				2912B0941509C46300B15EE3 /* SystemConfiguration.framework in Frameworks */,
+				2912B0931509C46300B15EE3 /* Security.framework in Frameworks */,
+				2912B0921509C46300B15EE3 /* MobileCoreServices.framework in Frameworks */,
 				29AEE42F140036AE00730510 /* CoreData.framework in Frameworks */,
-				2912B08A1509C41200B15EE3 /* libRestKit.a in Frameworks */,
+				2912B0901509C46300B15EE3 /* CFNetwork.framework in Frameworks */,
 				29AEE42B140036AE00730510 /* UIKit.framework in Frameworks */,
 				29AEE42D140036AE00730510 /* Foundation.framework in Frameworks */,
+				29580ED5155CB19C00431E20 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2912B0771509C32600B15EE3 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				2912B0811509C32600B15EE3 /* libRestKit.a */,
-				2912B0831509C32600B15EE3 /* RestKitTests.octest */,
-				2912B0851509C32600B15EE3 /* RestKit.framework */,
-				2912B0871509C32600B15EE3 /* RestKitFrameworkTests.octest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		29AEE41B140036AD00730510 = {
 			isa = PBXGroup;
 			children = (
+				29580ED4155CB19C00431E20 /* CoreGraphics.framework */,
+				2916B0C2153FB9A20050618F /* QuartzCore.framework */,
 				2912B08B1509C46300B15EE3 /* CFNetwork.framework */,
 				2912B08C1509C46300B15EE3 /* libxml2.dylib */,
 				2912B08D1509C46300B15EE3 /* MobileCoreServices.framework */,
 				2912B08E1509C46300B15EE3 /* Security.framework */,
 				2912B08F1509C46300B15EE3 /* SystemConfiguration.framework */,
-				2912B0761509C32600B15EE3 /* RestKit.xcodeproj */,
+				29E9AD19155B57F300EC722B /* RestKit.xcodeproj */,
 				29D4792914187D0300B7F4D0 /* FLUsers.h */,
 				29D4792A14187D0300B7F4D0 /* FLUsers.m */,
 				29D4792614187D0300B7F4D0 /* FLMessages.h */,
@@ -195,8 +207,14 @@
 		29AEE430140036AE00730510 /* FetLife */ = {
 			isa = PBXGroup;
 			children = (
-				290C0F721404842400D43E0C /* FLLoginViewController.h */,
-				290C0F731404842400D43E0C /* FLLoginViewController.m */,
+				29580ECE155CB05200431E20 /* HTMLNode.h */,
+				29580ECF155CB05200431E20 /* HTMLNode.m */,
+				29580ED0155CB05200431E20 /* HTMLParser.h */,
+				29580ED1155CB05200431E20 /* HTMLParser.m */,
+				29F55E3615118EC400A70306 /* FLLoginViewController_iPad.xib */,
+				29F55E2E15118EC400A70306 /* FLLoginViewController_iPhone.xib */,
+				29F55E3715118EC400A70306 /* FLLoginViewController.h */,
+				29F55E3815118EC400A70306 /* FLLoginViewController.m */,
 				291A9B461400962F001A299B /* FetLife.entitlements */,
 				29AEE439140036AE00730510 /* FLAppDelegate.h */,
 				29AEE43A140036AE00730510 /* FLAppDelegate.m */,
@@ -205,14 +223,14 @@
 				2964BF7714073D47003AAB45 /* Settings.bundle */,
 				29AEE43F140036AE00730510 /* FLMasterViewController.h */,
 				29AEE440140036AE00730510 /* FLMasterViewController.m */,
+				291CBB1B151010E900130A2A /* FetLifeLoginWebView.h */,
+				291CBB1D151010E900130A2A /* FetLifeLoginWebView.m */,
 				29AEE442140036AE00730510 /* FLDetailViewController.h */,
 				29AEE443140036AE00730510 /* FLDetailViewController.m */,
 				29AEE445140036AE00730510 /* FLMasterViewController_iPhone.xib */,
 				29AEE448140036AE00730510 /* FLMasterViewController_iPad.xib */,
 				29AEE44B140036AE00730510 /* FLDetailViewController_iPhone.xib */,
 				29AEE44E140036AE00730510 /* FLDetailViewController_iPad.xib */,
-				290C0F741404842400D43E0C /* FLLoginViewController_iPad.xib */,
-				290C0F77140487CD00D43E0C /* FLLoginViewController_iPhone.xib */,
 				29AEE43C140036AE00730510 /* FetLife.xcdatamodeld */,
 				29AEE431140036AE00730510 /* Supporting Files */,
 			);
@@ -230,6 +248,18 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		29E9AD1A155B57F300EC722B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				29A78883155CA1FD00E820E7 /* libRestKit.a */,
+				29A78885155CA1FD00E820E7 /* RestKitTests.octest */,
+				29A78887155CA1FD00E820E7 /* RestKit.framework */,
+				29A78889155CA1FD00E820E7 /* RestKitFrameworkTests.octest */,
+				29A7888B155CA1FD00E820E7 /* RestKitResources.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -244,7 +274,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				2912B0891509C3F400B15EE3 /* PBXTargetDependency */,
+				29E9AD2F155B580200EC722B /* PBXTargetDependency */,
 			);
 			name = FetLife;
 			productName = FetLife;
@@ -272,8 +302,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 2912B0771509C32600B15EE3 /* Products */;
-					ProjectRef = 2912B0761509C32600B15EE3 /* RestKit.xcodeproj */;
+					ProductGroup = 29E9AD1A155B57F300EC722B /* Products */;
+					ProjectRef = 29E9AD19155B57F300EC722B /* RestKit.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -284,32 +314,39 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		2912B0811509C32600B15EE3 /* libRestKit.a */ = {
+		29A78883155CA1FD00E820E7 /* libRestKit.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libRestKit.a;
-			remoteRef = 2912B0801509C32600B15EE3 /* PBXContainerItemProxy */;
+			remoteRef = 29A78882155CA1FD00E820E7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		2912B0831509C32600B15EE3 /* RestKitTests.octest */ = {
+		29A78885155CA1FD00E820E7 /* RestKitTests.octest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = RestKitTests.octest;
-			remoteRef = 2912B0821509C32600B15EE3 /* PBXContainerItemProxy */;
+			remoteRef = 29A78884155CA1FD00E820E7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		2912B0851509C32600B15EE3 /* RestKit.framework */ = {
+		29A78887155CA1FD00E820E7 /* RestKit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = RestKit.framework;
-			remoteRef = 2912B0841509C32600B15EE3 /* PBXContainerItemProxy */;
+			remoteRef = 29A78886155CA1FD00E820E7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		2912B0871509C32600B15EE3 /* RestKitFrameworkTests.octest */ = {
+		29A78889155CA1FD00E820E7 /* RestKitFrameworkTests.octest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = RestKitFrameworkTests.octest;
-			remoteRef = 2912B0861509C32600B15EE3 /* PBXContainerItemProxy */;
+			remoteRef = 29A78888155CA1FD00E820E7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		29A7888B155CA1FD00E820E7 /* RestKitResources.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RestKitResources.bundle;
+			remoteRef = 29A7888A155CA1FD00E820E7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -326,9 +363,9 @@
 				29AEE450140036AE00730510 /* FLDetailViewController_iPad.xib in Resources */,
 				291A9B491400A43D001A299B /* i_heart_fetlife_57.png in Resources */,
 				291A9B4B1400A510001A299B /* i_heart_fetlife_114.png in Resources */,
-				290C0F761404842400D43E0C /* FLLoginViewController_iPad.xib in Resources */,
-				290C0F79140487CD00D43E0C /* FLLoginViewController_iPhone.xib in Resources */,
 				2964BF7814073D47003AAB45 /* Settings.bundle in Resources */,
+				29F55E3B15118EC400A70306 /* FLLoginViewController_iPhone.xib in Resources */,
+				29F55E3F15118EC400A70306 /* FLLoginViewController_iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,31 +381,41 @@
 				29AEE43E140036AE00730510 /* FetLife.xcdatamodeld in Sources */,
 				29AEE441140036AE00730510 /* FLMasterViewController.m in Sources */,
 				29AEE444140036AE00730510 /* FLDetailViewController.m in Sources */,
-				290C0F751404842400D43E0C /* FLLoginViewController.m in Sources */,
 				29DC72C9140820750078A3D6 /* FLNetworkController.m in Sources */,
 				29D4792514187D0200B7F4D0 /* FLConversations.m in Sources */,
 				29D4792814187D0300B7F4D0 /* FLMessages.m in Sources */,
 				29D4792B14187D0300B7F4D0 /* FLUsers.m in Sources */,
+				29F55E4015118EC400A70306 /* FLLoginViewController.m in Sources */,
+				29580ED2155CB05200431E20 /* HTMLNode.m in Sources */,
+				29580ED3155CB05200431E20 /* HTMLParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2912B0891509C3F400B15EE3 /* PBXTargetDependency */ = {
+		29E9AD2F155B580200EC722B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = RestKit;
-			targetProxy = 2912B0881509C3F400B15EE3 /* PBXContainerItemProxy */;
+			targetProxy = 29E9AD2E155B580200EC722B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		290C0F77140487CD00D43E0C /* FLLoginViewController_iPhone.xib */ = {
+		291CBB1B151010E900130A2A /* FetLifeLoginWebView.h */ = {
 			isa = PBXVariantGroup;
 			children = (
-				290C0F78140487CD00D43E0C /* en */,
+				291CBB1C151010E900130A2A /* en */,
 			);
-			name = FLLoginViewController_iPhone.xib;
+			name = FetLifeLoginWebView.h;
+			sourceTree = "<group>";
+		};
+		291CBB1D151010E900130A2A /* FetLifeLoginWebView.m */ = {
+			isa = PBXVariantGroup;
+			children = (
+				291CBB1E151010E900130A2A /* en */,
+			);
+			name = FetLifeLoginWebView.m;
 			sourceTree = "<group>";
 		};
 		29AEE433140036AE00730510 /* InfoPlist.strings */ = {
@@ -411,21 +458,31 @@
 			name = FLDetailViewController_iPad.xib;
 			sourceTree = "<group>";
 		};
+		29F55E2E15118EC400A70306 /* FLLoginViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29F55E2F15118EC400A70306 /* en */,
+			);
+			name = FLLoginViewController_iPhone.xib;
+			path = en.lproj;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		29AEE451140036AE00730510 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Shawn Stricker (3ZKSZHWXZW)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -435,30 +492,32 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
-				PROVISIONING_PROFILE = "E7DEA384-4EDD-4473-96B6-3B08D6BE8B6E";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Debug;
 		};
 		29AEE452140036AE00730510 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Shawn Stricker (3ZKSZHWXZW)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "E7DEA384-4EDD-4473-96B6-3B08D6BE8B6E";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -468,12 +527,15 @@
 		29AEE454140036AE00730510 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = FetLife/FetLife.entitlements;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FetLife/FetLife-Prefix.pch";
-				HEADER_SEARCH_PATHS = "\"$(SOURCE_ROOT)/RestKit/Build\"";
+				GCC_VERSION = "";
+				HEADER_SEARCH_PATHS = (
+					"\"$(BUILT_PRODUCTS_DIR)/../../Headers\"",
+					"${SDK_DIR}/usr/include/libxml2",
+				);
 				INFOPLIST_FILE = "FetLife/FetLife-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
@@ -486,12 +548,15 @@
 		29AEE455140036AE00730510 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = FetLife/FetLife.entitlements;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FetLife/FetLife-Prefix.pch";
-				HEADER_SEARCH_PATHS = "\"$(SOURCE_ROOT)/RestKit/Build\"";
+				GCC_VERSION = "";
+				HEADER_SEARCH_PATHS = (
+					"\"$(BUILT_PRODUCTS_DIR)/../../Headers\"",
+					"${SDK_DIR}/usr/include/libxml2",
+				);
 				INFOPLIST_FILE = "FetLife/FetLife-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
