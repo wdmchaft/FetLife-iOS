@@ -22,5 +22,7 @@
 @property (strong, nonatomic) UINavigationController *navigationController;
 @property (strong, nonatomic) NSURL *fetlifeURL;
 @property (strong, nonatomic) UISplitViewController *splitViewController;
+@property (strong,nonatomic) UITabBarController *tabBarController;
+
 
 @end
