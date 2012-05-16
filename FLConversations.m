@@ -12,18 +12,19 @@
 
 @implementation FLConversations
 
-@dynamic archive_url;
-@dynamic archived;
-@dynamic delete_url;
-@dynamic deletion_token;
-@dynamic id;
-@dynamic last_message_timestamp;
-@dynamic mark_as_unread_url;
-@dynamic new_message_count;
-@dynamic subject;
-@dynamic unarchive_url;
-@dynamic update_url;
-@dynamic messages;
-@dynamic with_user;
+@synthesize archive_url;
+@synthesize archived;
+@synthesize delete_url;
+@synthesize deletion_token;
+@synthesize id;
+@synthesize last_message_timestamp;
+@synthesize mark_as_unread_url;
+@synthesize message_counts;
+@synthesize subject;
+@synthesize unarchive_url;
+@synthesize update_url;
+@synthesize messages;
+@synthesize with_user;
+
 
 @end

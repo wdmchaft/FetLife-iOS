@@ -11,7 +11,7 @@
 
 @class FLConversations;
 
-@interface FLMessages : NSManagedObject
+@interface FLMessages : NSObject 
 
 @property (nonatomic, retain) NSString * body;
 @property (nonatomic, retain) NSDate * created_at;

@@ -12,7 +12,7 @@
 @class FLMessages;
 @class FLUsers;
 
-@interface FLConversations : NSManagedObject
+@interface FLConversations : NSObject
 
 
 @property (nonatomic, retain) NSString * archive_url;
@@ -22,7 +22,7 @@
 @property (nonatomic, retain) NSNumber * id;
 @property (nonatomic, retain) NSDate * last_message_timestamp;
 @property (nonatomic, retain) NSString * mark_as_unread_url;
-@property (nonatomic, retain) NSNumber * new_message_count;
+@property (nonatomic, retain) NSNumber * message_counts;
 @property (nonatomic, retain) NSString * subject;
 @property (nonatomic, retain) NSString * unarchive_url;
 @property (nonatomic, retain) NSString * update_url;

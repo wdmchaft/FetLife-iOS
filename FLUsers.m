@@ -13,23 +13,23 @@
 
 @implementation FLUsers
 
-@dynamic age;
-@dynamic gender;
-@dynamic id;
-@dynamic location;
-@dynamic medium_avatar_url;
-@dynamic mini_avatar_url;
-@dynamic new_conversation_url;
-@dynamic new_wall_post_url;
-@dynamic nickname;
-@dynamic pictures_url;
-@dynamic posts_url;
-@dynamic profile_url;
-@dynamic role;
-@dynamic small_avatar_url;
-@dynamic supporter_badge;
-@dynamic videos_url;
-@dynamic conversations;
-@dynamic messages;
+@synthesize age;
+@synthesize gender;
+@synthesize id;
+@synthesize location;
+@synthesize medium_avatar_url;
+@synthesize mini_avatar_url;
+@synthesize conversation_url;
+@synthesize wall_post_url;
+@synthesize nickname;
+@synthesize pictures_url;
+@synthesize posts_url;
+@synthesize profile_url;
+@synthesize role;
+@synthesize small_avatar_url;
+@synthesize supporter_badge;
+@synthesize videos_url;
+@synthesize conversations;
+@synthesize messages;
 
 @end

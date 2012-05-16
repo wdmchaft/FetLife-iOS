@@ -11,7 +11,7 @@
 
 @class FLConversations, FLMessages;
 
-@interface FLUsers : NSManagedObject
+@interface FLUsers : NSObject
 
 @property (nonatomic, retain) NSNumber * age;
 @property (nonatomic, retain) NSString * gender;
@@ -19,8 +19,8 @@
 @property (nonatomic, retain) NSString * location;
 @property (nonatomic, retain) NSString * medium_avatar_url;
 @property (nonatomic, retain) NSString * mini_avatar_url;
-@property (nonatomic, retain) NSString * new_conversation_url;
-@property (nonatomic, retain) NSString * new_wall_post_url;
+@property (nonatomic, retain) NSString * conversation_url;
+@property (nonatomic, retain) NSString * wall_post_url;
 @property (nonatomic, retain) NSString * nickname;
 @property (nonatomic, retain) NSString * pictures_url;
 @property (nonatomic, retain) NSString * posts_url;
