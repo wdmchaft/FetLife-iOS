@@ -7,11 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <RestKit/RestKit.h>
 
-@interface FLNetworkController : NSObject <RKRequestDelegate>
+@interface FLNetworkController : NSObject
 
 +(BOOL) loggedIn;
-+(BOOL) loginWithUsername:(NSString *)username withPassword:(NSString *)password; 
++(BOOL) loginWithUsername:(NSString *)username withPassword:(NSString *)password;
+-(void) getConversations;
+
+
 
 @end

@@ -42,16 +42,7 @@
     }
     return NO;
 }
-- (void)request:(RKRequest*)request didLoadResponse:(RKResponse*)response {
-    if ([request isGET]) {
-        // Handling GET /foo.xml
-        
-        if ([response isOK]) {
-            // Success! Let's take a look at the data
-            NSLog(@"Retrieved XML: %@", [response bodyAsString]);
-        }
-    }
-}
+
 +(BOOL) loginWithUsername:(NSString *)username withPassword:(NSString *)password {
     UIWebView *webView = [[UIWebView alloc] init];
     NSString *ua = [webView stringByEvaluatingJavaScriptFromString:@"navigator.userAgent"];
@@ -100,6 +91,8 @@
         }
     }
     return true;
+}
+-(void) getConversations {
 }
 
 @end
