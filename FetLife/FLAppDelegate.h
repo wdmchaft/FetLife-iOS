@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol RKRequestDelegate;
+
 @interface FLAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
