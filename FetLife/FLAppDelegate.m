@@ -3,9 +3,11 @@
 //  FetLife
 //
 //  Created by Shawn Stricker on 8/20/11.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2011 KB1IBT.com. All rights reserved.
 //
 
+#import <RestKit/RestKit.h>
+#import <RestKit/CoreData.h>
 #import "FLAppDelegate.h"
 
 #import "FLMasterViewController.h"
