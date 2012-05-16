@@ -10,8 +10,10 @@
 #import <CoreData/CoreData.h>
 
 @class FLMessages;
+@class FLUsers;
 
 @interface FLConversations : NSManagedObject
+
 
 @property (nonatomic, retain) NSString * archive_url;
 @property (nonatomic, retain) NSNumber * archived;
@@ -25,6 +27,6 @@
 @property (nonatomic, retain) NSString * unarchive_url;
 @property (nonatomic, retain) NSString * update_url;
 @property (nonatomic, retain) FLMessages *messages;
-@property (nonatomic, retain) NSManagedObject *with_user;
+@property (nonatomic, retain) FLUsers *with_user;
 
 @end
