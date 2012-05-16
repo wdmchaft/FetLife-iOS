@@ -6,16 +6,20 @@
 //  Copyright (c) 2011 KB1IBT.com. All rights reserved.
 //
 
-#import "FLAppDelegate.h"
+#import <RestKit/RestKit.h>
+#import <RestKit/CoreData.h>
 #import "FLMasterViewController.h"
 
 #import "FLNetworkController.h"
 
 #import "FLDetailViewController.h"
 #import "FLLoginViewController.h"
+#import "FLConversations.h"
+#import "FLUsers.h"
 
 @interface FLMasterViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
+@property BOOL loggedIn;
 @end
 
 @implementation FLMasterViewController
@@ -23,6 +27,8 @@
 @synthesize detailViewController = _detailViewController;
 @synthesize fetchedResultsController = __fetchedResultsController;
 @synthesize managedObjectContext = __managedObjectContext;
+@synthesize conversations;
+@synthesize loggedIn;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -78,13 +84,15 @@
     if (![FLNetworkController loggedIn]) {
         if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
             FLLoginViewController *loginView = [[FLLoginViewController alloc] initWithNibName:@"FLLoginViewController_iPhone" bundle:nil];
-            [[[(FLAppDelegate *)[[UIApplication sharedApplication] delegate] window] rootViewController] presentModalViewController:loginView animated:YES];
+            [[[[[UIApplication sharedApplication] delegate] window] rootViewController] presentModalViewController:loginView animated:YES];
         }else{
             FLLoginViewController *loginView = [[FLLoginViewController alloc] initWithNibName:@"FLLoginViewController_iPad" bundle:nil];
             loginView.modalPresentationStyle = UIModalPresentationFormSheet;
             loginView.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-            [[[(FLAppDelegate *)[[UIApplication sharedApplication] delegate] window] rootViewController] presentModalViewController:loginView animated:YES];
+            [[[[[UIApplication sharedApplication] delegate] window] rootViewController] presentModalViewController:loginView animated:YES];
         }
+    }else {
+        [[RKObjectManager sharedManager] loadObjectsAtResourcePath:@"/conversations.json" delegate:self];
     }
 }
 
@@ -131,8 +139,10 @@
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         }
     }
-
-    [self configureCell:cell atIndexPath:indexPath];
+    cell.textLabel.text = [(FLConversations*)[self.conversations objectAtIndex:indexPath.row] subject];
+    cell.detailTextLabel.text = [(FLUsers*)[(FLConversations*)[self.conversations objectAtIndex:indexPath.row]with_user]nickname];
+    cell.imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[(FLUsers*)[(FLConversations*)[self.conversations objectAtIndex:indexPath.row]with_user]small_avatar_url]]]];
+//    [self configureCell:cell atIndexPath:indexPath];
     return cell;
 }
 
