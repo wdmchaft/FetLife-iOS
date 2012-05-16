@@ -14,9 +14,10 @@
 
 #import "FLDetailViewController.h"
 
-
 #import "FLNetworkController.h"
-#import <RestKit/RestKit.h>
+#import "FLConversations.h"
+#import "FLUsers.h"
+#import "FLMessages.h"
 
 @implementation FLAppDelegate
 
@@ -26,19 +27,36 @@
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
 @synthesize navigationController = _navigationController;
 @synthesize splitViewController = _splitViewController;
+@synthesize tabBarController = _tabBarController;
+@synthesize fetlifeURL = _fetlifeURL;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    RKClient *client = [RKClient clientWithBaseURL:@"https://fetlife.com"];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
+    self.tabBarController = [[UITabBarController alloc] init];
+
+    //RESTKIT
+    [RKObjectManager objectManagerWithBaseURLString:@"https://fetlife.com/"];
+    RKObjectMapping *userMapping = [RKObjectMapping mappingForClass:[FLUsers class]];
+   [userMapping mapAttributes:@"id", @"nickname", @"profile_url",@"age",@"gender",@"role",@"location",@"pictures_url",@"videos_url",@"posts_url",@"medium_avatar_url",@"mini_avatar_url",@"small_avatar_url",nil];
+    RKObjectMapping *conversationMapping = [RKObjectMapping mappingForClass:[FLConversations class]];
+    [conversationMapping mapKeyPath:@"id" toAttribute:@"id"];
+    [conversationMapping mapKeyPath:@"subject" toAttribute:@"subject"];
+    [conversationMapping mapKeyPath:@"archived" toAttribute:@"archived"];
+    [conversationMapping mapKeyPath:@"archive_url" toAttribute:@"archive_url"];
+    [conversationMapping mapKeyPath:@"delete_url" toAttribute:@"delete_url"];
+    [conversationMapping mapKeyPath:@"deletion_token" toAttribute:@"deletion_token"];
+    [conversationMapping hasOne:@"with_user" withMapping:userMapping];
+    [[RKObjectManager sharedManager].mappingProvider setMapping:conversationMapping forKeyPath:@"conversations"];
+
+    
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        FLMasterViewController *masterViewController = [[FLMasterViewController alloc] initWithNibName:@"FLMasterViewController_iPhone" bundle:nil];
+        FLMasterViewController *masterViewController = [[FLMasterViewController alloc] init];
         self.navigationController = [[UINavigationController alloc] initWithRootViewController:masterViewController];
         self.window.rootViewController = self.navigationController;
         masterViewController.managedObjectContext = self.managedObjectContext;
     } else {
-        FLMasterViewController *masterViewController = [[FLMasterViewController alloc] initWithNibName:@"FLMasterViewController_iPad" bundle:nil];
+        FLMasterViewController *masterViewController = [[FLMasterViewController alloc] init];
         UINavigationController *masterNavigationController = [[UINavigationController alloc] initWithRootViewController:masterViewController];
         
         FLDetailViewController *detailViewController = [[FLDetailViewController alloc] initWithNibName:@"FLDetailViewController_iPad" bundle:nil];
