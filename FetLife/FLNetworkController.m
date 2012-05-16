@@ -7,8 +7,11 @@
 //
 
 #import "FLNetworkController.h"
+#import "FLUsers.h"
+#import "FLConversations.h"
 #import "HTMLParser.h"
 #import <RestKit/RKJSONParserJSONKit.h>
+#import <RestKit/RestKit.h>
 
 
 @implementation FLNetworkController
@@ -83,6 +86,7 @@
     NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
     [request setURL:[NSURL URLWithString:@"https://fetlife.com/session"]];
     [request setHTTPMethod:@"POST"];
+    [request setValue:@"multipart/form-data" forHTTPHeaderField:@"Content-Type"];
     [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
     [request setValue: ua forHTTPHeaderField: @"User-Agent"];
     [request setHTTPBody:jsonData];
