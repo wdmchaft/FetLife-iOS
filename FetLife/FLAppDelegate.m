@@ -39,6 +39,9 @@
     [RKObjectManager objectManagerWithBaseURLString:@"https://fetlife.com/"];
     RKObjectMapping *userMapping = [RKObjectMapping mappingForClass:[FLUsers class]];
    [userMapping mapAttributes:@"id", @"nickname", @"profile_url",@"age",@"gender",@"role",@"location",@"pictures_url",@"videos_url",@"posts_url",@"medium_avatar_url",@"mini_avatar_url",@"small_avatar_url",nil];
+    RKObjectMapping *messagesMapping = [RKObjectMapping mappingForClass:[FLMessages class]];
+    [messagesMapping mapAttributes:@"id", @"body", @"created_at",@"stripped_body",nil];
+    [messagesMapping hasOne:@"sender" withMapping:userMapping];
     RKObjectMapping *conversationMapping = [RKObjectMapping mappingForClass:[FLConversations class]];
     [conversationMapping mapKeyPath:@"id" toAttribute:@"id"];
     [conversationMapping mapKeyPath:@"subject" toAttribute:@"subject"];
@@ -47,13 +50,17 @@
     [conversationMapping mapKeyPath:@"delete_url" toAttribute:@"delete_url"];
     [conversationMapping mapKeyPath:@"deletion_token" toAttribute:@"deletion_token"];
     [conversationMapping hasOne:@"with_user" withMapping:userMapping];
+    [conversationMapping hasMany:@"messages" withMapping:messagesMapping];
     [[RKObjectManager sharedManager].mappingProvider setMapping:conversationMapping forKeyPath:@"conversations"];
+    [[RKObjectManager sharedManager].mappingProvider setObjectMapping:conversationMapping forResourcePathPattern:@"/conversations/:id"];
+    [[[RKObjectManager sharedManager] router] routeClass:[FLConversations class] toResourcePath:@"/conversations/:id"];
 
     
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
         FLMasterViewController *masterViewController = [[FLMasterViewController alloc] init];
         self.navigationController = [[UINavigationController alloc] initWithRootViewController:masterViewController];
-        self.window.rootViewController = self.navigationController;
+        self.tabBarController.viewControllers = [NSArray arrayWithObjects:self.navigationController,nil];
+        self.window.rootViewController = self.tabBarController;
         masterViewController.managedObjectContext = self.managedObjectContext;
     } else {
         FLMasterViewController *masterViewController = [[FLMasterViewController alloc] init];
@@ -66,7 +73,8 @@
         self.splitViewController.delegate = detailViewController;
         self.splitViewController.viewControllers = [NSArray arrayWithObjects:masterNavigationController, detailNavigationController, nil];
         
-        self.window.rootViewController = self.splitViewController;
+        self.tabBarController.viewControllers = [NSArray arrayWithObjects:self.splitViewController,nil];
+        self.window.rootViewController = self.tabBarController;
         masterViewController.detailViewController = detailViewController;
         masterViewController.managedObjectContext = self.managedObjectContext;
     }
