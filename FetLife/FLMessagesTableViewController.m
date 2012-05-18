@@ -9,6 +9,7 @@
 #import <RestKit/CoreData.h>
 #import "FLMessagesTableViewController.h"
 #import "FLMessages.h"
+#import "FLUsers.h"
 
 @interface FLMessagesTableViewController ()
 
@@ -56,14 +57,6 @@
     [super viewWillAppear:animated];
     [[RKObjectManager sharedManager] getObject:_conversation delegate:self];
 }
--(void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-}
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-}
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
@@ -96,8 +89,9 @@
     NSString *formatString = [NSDateFormatter dateFormatFromTemplate:@"EdMMM" options:0 locale:[NSLocale currentLocale]];
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
     [formatter setDateFormat:formatString];
-    NSDate *created_at = [[self.messages objectAtIndex:indexPath.row] created_at];
-    cell.textLabel.text = [formatter stringFromDate:created_at];
+    cell.textLabel.text = [formatter stringFromDate:[[self.messages objectAtIndex:indexPath.row] created_at]];
+    NSLog(@"Created At: %@",[[[self.messages objectAtIndex:indexPath.row] created_at] description]);
+    cell.detailTextLabel.text = [(FLUsers*)[(FLMessages*)[self.messages objectAtIndex:indexPath.row]sender]nickname];
     return cell;
 }
 
