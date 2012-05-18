@@ -37,6 +37,7 @@
 		29D4792814187D0300B7F4D0 /* FLMessages.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D4792714187D0300B7F4D0 /* FLMessages.m */; };
 		29D4792B14187D0300B7F4D0 /* FLUsers.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D4792A14187D0300B7F4D0 /* FLUsers.m */; };
 		29DC72C9140820750078A3D6 /* FLNetworkController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29DC72C8140820750078A3D6 /* FLNetworkController.m */; };
+		29E12A461564B18100EB5D8B /* FLMessagesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29E12A451564B18100EB5D8B /* FLMessagesTableViewController.m */; };
 		29F55E3B15118EC400A70306 /* FLLoginViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29F55E2E15118EC400A70306 /* FLLoginViewController_iPhone.xib */; };
 		29F55E3F15118EC400A70306 /* FLLoginViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29F55E3615118EC400A70306 /* FLLoginViewController_iPad.xib */; };
 		29F55E4015118EC400A70306 /* FLLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29F55E3815118EC400A70306 /* FLLoginViewController.m */; };
@@ -97,8 +98,6 @@
 		291A9B461400962F001A299B /* FetLife.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = FetLife.entitlements; sourceTree = "<group>"; };
 		291A9B481400A43D001A299B /* i_heart_fetlife_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = i_heart_fetlife_57.png; sourceTree = "<group>"; };
 		291A9B4A1400A510001A299B /* i_heart_fetlife_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = i_heart_fetlife_114.png; sourceTree = "<group>"; };
-		291CBB1C151010E900130A2A /* en */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = en; path = en.lproj/FetLifeLoginWebView.h; sourceTree = "<group>"; };
-		291CBB1E151010E900130A2A /* en */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = en; path = en.lproj/FetLifeLoginWebView.m; sourceTree = "<group>"; };
 		29580ECE155CB05200431E20 /* HTMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLNode.h; sourceTree = "<group>"; };
 		29580ECF155CB05200431E20 /* HTMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLNode.m; sourceTree = "<group>"; };
 		29580ED0155CB05200431E20 /* HTMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLParser.h; sourceTree = "<group>"; };
@@ -132,6 +131,8 @@
 		29D4792A14187D0300B7F4D0 /* FLUsers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLUsers.m; sourceTree = "<group>"; };
 		29DC72C7140820750078A3D6 /* FLNetworkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLNetworkController.h; sourceTree = "<group>"; };
 		29DC72C8140820750078A3D6 /* FLNetworkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLNetworkController.m; sourceTree = "<group>"; };
+		29E12A441564B18000EB5D8B /* FLMessagesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLMessagesTableViewController.h; sourceTree = "<group>"; };
+		29E12A451564B18100EB5D8B /* FLMessagesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLMessagesTableViewController.m; sourceTree = "<group>"; };
 		29E9AD19155B57F300EC722B /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = RestKit/RestKit.xcodeproj; sourceTree = "<group>"; };
 		29F55E2F15118EC400A70306 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = FLLoginViewController_iPhone.xib; sourceTree = "<group>"; };
 		29F55E3615118EC400A70306 /* FLLoginViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FLLoginViewController_iPad.xib; sourceTree = "<group>"; };
@@ -223,8 +224,8 @@
 				2964BF7714073D47003AAB45 /* Settings.bundle */,
 				29AEE43F140036AE00730510 /* FLMasterViewController.h */,
 				29AEE440140036AE00730510 /* FLMasterViewController.m */,
-				291CBB1B151010E900130A2A /* FetLifeLoginWebView.h */,
-				291CBB1D151010E900130A2A /* FetLifeLoginWebView.m */,
+				29E12A441564B18000EB5D8B /* FLMessagesTableViewController.h */,
+				29E12A451564B18100EB5D8B /* FLMessagesTableViewController.m */,
 				29AEE442140036AE00730510 /* FLDetailViewController.h */,
 				29AEE443140036AE00730510 /* FLDetailViewController.m */,
 				29AEE445140036AE00730510 /* FLMasterViewController_iPhone.xib */,
@@ -388,6 +389,7 @@
 				29F55E4015118EC400A70306 /* FLLoginViewController.m in Sources */,
 				29580ED2155CB05200431E20 /* HTMLNode.m in Sources */,
 				29580ED3155CB05200431E20 /* HTMLParser.m in Sources */,
+				29E12A461564B18100EB5D8B /* FLMessagesTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,22 +404,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		291CBB1B151010E900130A2A /* FetLifeLoginWebView.h */ = {
-			isa = PBXVariantGroup;
-			children = (
-				291CBB1C151010E900130A2A /* en */,
-			);
-			name = FetLifeLoginWebView.h;
-			sourceTree = "<group>";
-		};
-		291CBB1D151010E900130A2A /* FetLifeLoginWebView.m */ = {
-			isa = PBXVariantGroup;
-			children = (
-				291CBB1E151010E900130A2A /* en */,
-			);
-			name = FetLifeLoginWebView.m;
-			sourceTree = "<group>";
-		};
 		29AEE433140036AE00730510 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
