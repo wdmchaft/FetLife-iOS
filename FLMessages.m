@@ -12,11 +12,12 @@
 
 @implementation FLMessages
 
-@dynamic body;
-@dynamic created_at;
-@dynamic stripped_body;
-@dynamic unread;
-@dynamic conversation;
-@dynamic sender;
+@synthesize id;
+@synthesize body;
+@synthesize created_at;
+@synthesize stripped_body;
+@synthesize unread;
+@synthesize conversation;
+@synthesize sender;
 
 @end

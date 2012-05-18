@@ -10,14 +10,16 @@
 #import <CoreData/CoreData.h>
 
 @class FLConversations;
+@class FLUsers;
 
 @interface FLMessages : NSObject 
 
+@property (nonatomic, retain) NSNumber * id;
 @property (nonatomic, retain) NSString * body;
 @property (nonatomic, retain) NSDate * created_at;
 @property (nonatomic, retain) NSString * stripped_body;
 @property (nonatomic, retain) NSNumber * unread;
 @property (nonatomic, retain) FLConversations *conversation;
-@property (nonatomic, retain) NSManagedObject *sender;
+@property (nonatomic, retain) FLUsers *sender;
 
 @end

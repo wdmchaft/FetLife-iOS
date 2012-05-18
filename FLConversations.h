@@ -26,7 +26,7 @@
 @property (nonatomic, retain) NSString * subject;
 @property (nonatomic, retain) NSString * unarchive_url;
 @property (nonatomic, retain) NSString * update_url;
-@property (nonatomic, retain) FLMessages *messages;
+@property (nonatomic, retain) NSArray *messages;
 @property (nonatomic, retain) FLUsers *with_user;
 
 @end
