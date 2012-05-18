@@ -7,6 +7,7 @@
 //
 
 #import "FLDetailViewController.h"
+#import "FLConversations.h"
 
 @interface FLDetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
