@@ -25,6 +25,7 @@
     [request setHTTPMethod:@"GET"];
     [request setValue: ua forHTTPHeaderField: @"User-Agent"];
     [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [request setHTTPShouldHandleCookies:YES];
     NSHTTPURLResponse *theResponse =[[NSHTTPURLResponse alloc]init];
     NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&theResponse error:&theError];
     NSString *encoding = [theResponse textEncodingName];
@@ -70,8 +71,8 @@
             utf8Value = [inputNode getAttributeNamed:@"value"];
         }
     }
-    NSArray *keys = [NSArray arrayWithObjects:@"nickname_or_email", @"password", @"commit",@"authenticity_token",@"utf8", nil];
-    NSArray *objects = [NSArray arrayWithObjects:username, password, @"Login to FetLife",authKey,utf8Value, nil];
+    NSArray *keys = [NSArray arrayWithObjects:@"nickname_or_email", @"password", @"commit",@"authenticity_token",@"utf8",@"remember_me", nil];
+    NSArray *objects = [NSArray arrayWithObjects:username, password, @"Login to FetLife",authKey,utf8Value,@"1", nil];
     NSDictionary *jsonDictionary = [NSDictionary dictionaryWithObjects:objects forKeys:keys];
     NSString *jsonString = [jsonDictionary stringWithURLEncodedEntries];
     NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
@@ -91,8 +92,6 @@
         }
     }
     return true;
-}
--(void) getConversations {
 }
 
 @end

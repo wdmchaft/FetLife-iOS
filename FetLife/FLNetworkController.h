@@ -12,7 +12,6 @@
 
 +(BOOL) loggedIn;
 +(BOOL) loginWithUsername:(NSString *)username withPassword:(NSString *)password;
--(void) getConversations;
 
 
 
