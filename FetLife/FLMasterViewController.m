@@ -9,6 +9,7 @@
 #import <RestKit/RestKit.h>
 #import <RestKit/CoreData.h>
 #import "FLMasterViewController.h"
+#import "FLMessagesTableViewController.h"
 
 #import "FLNetworkController.h"
 
@@ -18,14 +19,13 @@
 #import "FLUsers.h"
 
 @interface FLMasterViewController ()
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 @property BOOL loggedIn;
 @end
 
 @implementation FLMasterViewController
 
 @synthesize detailViewController = _detailViewController;
-@synthesize fetchedResultsController = __fetchedResultsController;
+@synthesize messageViewController = _messageViewController;
 @synthesize managedObjectContext = __managedObjectContext;
 @synthesize conversations;
 @synthesize loggedIn;
@@ -92,7 +92,7 @@
             [[[[[UIApplication sharedApplication] delegate] window] rootViewController] presentModalViewController:loginView animated:YES];
         }
     }else {
-        [[RKObjectManager sharedManager] loadObjectsAtResourcePath:@"/conversations.json" delegate:self];
+        [[RKObjectManager sharedManager] loadObjectsAtResourcePath:@"/conversations" delegate:self];
     }
 }
 
@@ -160,31 +160,22 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+    FLConversations *selectedConversation = [self.conversations objectAtIndex:indexPath.row];
+    if (!self.messageViewController) {
+        self.messageViewController = [[FLMessagesTableViewController alloc] init];
+    }
+    self.messageViewController.conversation = selectedConversation;
+    [self.navigationController pushViewController:self.messageViewController animated:YES];
+    
+/*    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
 	    if (!self.detailViewController) {
 	        self.detailViewController = [[FLDetailViewController alloc] initWithNibName:@"FLDetailViewController_iPhone" bundle:nil];
 	    }
-        NSManagedObject *selectedObject = [[self fetchedResultsController] objectAtIndexPath:indexPath];
-        self.detailViewController.detailItem = selectedObject;    
+        self.detailViewController.detailItem = selectedConversation;    
         [self.navigationController pushViewController:self.detailViewController animated:YES];
     } else {
-        NSManagedObject *selectedObject = [[self fetchedResultsController] objectAtIndexPath:indexPath];
-        self.detailViewController.detailItem = selectedObject;    
-    }
-}
-
-- (void)controller:(NSFetchedResultsController *)controller didChangeSection:(id <NSFetchedResultsSectionInfo>)sectionInfo
-           atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type
-{
-    switch(type) {
-        case NSFetchedResultsChangeInsert:
-            [self.tableView insertSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
-            break;
-            
-        case NSFetchedResultsChangeDelete:
-            [self.tableView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
-            break;
-    }
+        self.detailViewController.detailItem = selectedConversation;    
+    }*/
 }
 
 @end

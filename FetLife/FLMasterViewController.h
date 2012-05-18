@@ -9,15 +9,16 @@
 #import <UIKit/UIKit.h>
 
 @class FLDetailViewController;
+@class FLMessagesTableViewController;
 @protocol RKRequestDelegate;
 
 #import <CoreData/CoreData.h>
 
-@interface FLMasterViewController : UITableViewController <NSFetchedResultsControllerDelegate, RKRequestDelegate>
+@interface FLMasterViewController : UITableViewController <RKRequestDelegate>
 
 @property (strong, nonatomic) FLDetailViewController *detailViewController;
+@property (strong, nonatomic) FLMessagesTableViewController *messageViewController;
 
-@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 @property (strong,nonatomic) NSArray *conversations;
