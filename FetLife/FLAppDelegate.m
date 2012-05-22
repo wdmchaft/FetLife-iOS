@@ -37,6 +37,8 @@
 
     //RESTKIT
     [RKObjectManager objectManagerWithBaseURLString:@"https://fetlife.com/"];
+    [[RKClient sharedClient].requestQueue setShowsNetworkActivityIndicatorWhenBusy:YES];
+    [RKObjectMapping addDefaultDateFormatterForString:@"yyyy/MM/dd HH:mm:ss Z" inTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"UTC"]];
     RKObjectMapping *userMapping = [RKObjectMapping mappingForClass:[FLUsers class]];
    [userMapping mapAttributes:@"id", @"nickname", @"profile_url",@"age",@"gender",@"role",@"location",@"pictures_url",@"videos_url",@"posts_url",@"medium_avatar_url",@"mini_avatar_url",@"small_avatar_url",nil];
     RKObjectMapping *messagesMapping = [RKObjectMapping mappingForClass:[FLMessages class]];

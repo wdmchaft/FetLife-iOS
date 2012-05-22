@@ -86,7 +86,8 @@
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         }
     }
-    NSString *formatString = [NSDateFormatter dateFormatFromTemplate:@"EdMMM" options:0 locale:[NSLocale currentLocale]];
+
+    NSString *formatString = [NSDateFormatter dateFormatFromTemplate:@"EdMMM h:mm a" options:0 locale:[NSLocale currentLocale]];
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
     [formatter setDateFormat:formatString];
     cell.textLabel.text = [formatter stringFromDate:[[self.messages objectAtIndex:indexPath.row] created_at]];

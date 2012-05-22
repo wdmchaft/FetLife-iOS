@@ -96,8 +96,8 @@
 		2912B08F1509C46300B15EE3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		2916B0C2153FB9A20050618F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		291A9B461400962F001A299B /* FetLife.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = FetLife.entitlements; sourceTree = "<group>"; };
-		291A9B481400A43D001A299B /* i_heart_fetlife_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = i_heart_fetlife_57.png; sourceTree = "<group>"; };
-		291A9B4A1400A510001A299B /* i_heart_fetlife_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = i_heart_fetlife_114.png; sourceTree = "<group>"; };
+		291A9B481400A43D001A299B /* i_heart_fetlife_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = i_heart_fetlife_57.png; path = ../i_heart_fetlife_57.png; sourceTree = "<group>"; };
+		291A9B4A1400A510001A299B /* i_heart_fetlife_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = i_heart_fetlife_114.png; path = ../i_heart_fetlife_114.png; sourceTree = "<group>"; };
 		29580ECE155CB05200431E20 /* HTMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLNode.h; sourceTree = "<group>"; };
 		29580ECF155CB05200431E20 /* HTMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLNode.m; sourceTree = "<group>"; };
 		29580ED0155CB05200431E20 /* HTMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLParser.h; sourceTree = "<group>"; };
@@ -123,12 +123,12 @@
 		29AEE449140036AE00730510 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FLMasterViewController_iPad.xib; sourceTree = "<group>"; };
 		29AEE44C140036AE00730510 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FLDetailViewController_iPhone.xib; sourceTree = "<group>"; };
 		29AEE44F140036AE00730510 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FLDetailViewController_iPad.xib; sourceTree = "<group>"; };
-		29D4792314187D0200B7F4D0 /* FLConversations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLConversations.h; sourceTree = "<group>"; };
-		29D4792414187D0200B7F4D0 /* FLConversations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLConversations.m; sourceTree = "<group>"; };
-		29D4792614187D0300B7F4D0 /* FLMessages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLMessages.h; sourceTree = "<group>"; };
-		29D4792714187D0300B7F4D0 /* FLMessages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLMessages.m; sourceTree = "<group>"; };
-		29D4792914187D0300B7F4D0 /* FLUsers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLUsers.h; sourceTree = "<group>"; };
-		29D4792A14187D0300B7F4D0 /* FLUsers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLUsers.m; sourceTree = "<group>"; };
+		29D4792314187D0200B7F4D0 /* FLConversations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FLConversations.h; path = ../FLConversations.h; sourceTree = "<group>"; };
+		29D4792414187D0200B7F4D0 /* FLConversations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FLConversations.m; path = ../FLConversations.m; sourceTree = "<group>"; };
+		29D4792614187D0300B7F4D0 /* FLMessages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FLMessages.h; path = ../FLMessages.h; sourceTree = "<group>"; };
+		29D4792714187D0300B7F4D0 /* FLMessages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FLMessages.m; path = ../FLMessages.m; sourceTree = "<group>"; };
+		29D4792914187D0300B7F4D0 /* FLUsers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FLUsers.h; path = ../FLUsers.h; sourceTree = "<group>"; };
+		29D4792A14187D0300B7F4D0 /* FLUsers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FLUsers.m; path = ../FLUsers.m; sourceTree = "<group>"; };
 		29DC72C7140820750078A3D6 /* FLNetworkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLNetworkController.h; sourceTree = "<group>"; };
 		29DC72C8140820750078A3D6 /* FLNetworkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLNetworkController.m; sourceTree = "<group>"; };
 		29E12A441564B18000EB5D8B /* FLMessagesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLMessagesTableViewController.h; sourceTree = "<group>"; };
@@ -173,14 +173,6 @@
 				2912B08E1509C46300B15EE3 /* Security.framework */,
 				2912B08F1509C46300B15EE3 /* SystemConfiguration.framework */,
 				29E9AD19155B57F300EC722B /* RestKit.xcodeproj */,
-				29D4792914187D0300B7F4D0 /* FLUsers.h */,
-				29D4792A14187D0300B7F4D0 /* FLUsers.m */,
-				29D4792614187D0300B7F4D0 /* FLMessages.h */,
-				29D4792714187D0300B7F4D0 /* FLMessages.m */,
-				29D4792314187D0200B7F4D0 /* FLConversations.h */,
-				29D4792414187D0200B7F4D0 /* FLConversations.m */,
-				291A9B4A1400A510001A299B /* i_heart_fetlife_114.png */,
-				291A9B481400A43D001A299B /* i_heart_fetlife_57.png */,
 				29AEE430140036AE00730510 /* FetLife */,
 				29AEE429140036AE00730510 /* Frameworks */,
 				29AEE427140036AE00730510 /* Products */,
@@ -208,6 +200,14 @@
 		29AEE430140036AE00730510 /* FetLife */ = {
 			isa = PBXGroup;
 			children = (
+				291A9B4A1400A510001A299B /* i_heart_fetlife_114.png */,
+				291A9B481400A43D001A299B /* i_heart_fetlife_57.png */,
+				29D4792914187D0300B7F4D0 /* FLUsers.h */,
+				29D4792A14187D0300B7F4D0 /* FLUsers.m */,
+				29D4792614187D0300B7F4D0 /* FLMessages.h */,
+				29D4792714187D0300B7F4D0 /* FLMessages.m */,
+				29D4792314187D0200B7F4D0 /* FLConversations.h */,
+				29D4792414187D0200B7F4D0 /* FLConversations.m */,
 				29580ECE155CB05200431E20 /* HTMLNode.h */,
 				29580ECF155CB05200431E20 /* HTMLNode.m */,
 				29580ED0155CB05200431E20 /* HTMLParser.h */,
