@@ -166,16 +166,6 @@
     }
     self.messageViewController.conversation = selectedConversation;
     [self.navigationController pushViewController:self.messageViewController animated:YES];
-    
-/*    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-	    if (!self.detailViewController) {
-	        self.detailViewController = [[FLDetailViewController alloc] initWithNibName:@"FLDetailViewController_iPhone" bundle:nil];
-	    }
-        self.detailViewController.detailItem = selectedConversation;    
-        [self.navigationController pushViewController:self.detailViewController animated:YES];
-    } else {
-        self.detailViewController.detailItem = selectedConversation;    
-    }*/
 }
 
 @end

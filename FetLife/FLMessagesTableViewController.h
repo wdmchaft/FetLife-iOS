@@ -9,11 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "FLConversations.h"
 
+@class FLDetailViewController;
 
 @protocol RKObjectLoaderDelegate;
 
 @interface FLMessagesTableViewController : UITableViewController <RKObjectLoaderDelegate>
 
+@property (strong, nonatomic) FLDetailViewController *detailViewController;
 @property (strong,nonatomic) NSArray *messages;
 @property (strong,nonatomic) FLConversations *conversation;
 

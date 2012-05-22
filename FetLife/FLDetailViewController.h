@@ -12,6 +12,8 @@
 
 @property (strong, nonatomic) id detailItem;
 
-@property (strong, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+@property (strong, nonatomic) IBOutlet UITextView *bodyLabel;
+@property (strong,nonatomic) IBOutlet UILabel *usernameLabel;
+@property (strong,nonatomic) IBOutlet UILabel *dateLabel;
 
 @end

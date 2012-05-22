@@ -10,6 +10,7 @@
 #import "FLMessagesTableViewController.h"
 #import "FLMessages.h"
 #import "FLUsers.h"
+#import "FLDetailViewController.h"
 
 @interface FLMessagesTableViewController ()
 
@@ -19,6 +20,7 @@
 
 @synthesize messages = _messages;
 @synthesize conversation = _conversation;
+@synthesize detailViewController = _detailViewController;
 
 -(void)setConversation:(FLConversations *)newConversation
 {
@@ -60,7 +62,11 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+    } else {
+        return YES;
+    }
 }
 
 #pragma mark - Table view data source
@@ -91,8 +97,7 @@
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
     [formatter setDateFormat:formatString];
     cell.textLabel.text = [formatter stringFromDate:[[self.messages objectAtIndex:indexPath.row] created_at]];
-    NSLog(@"Created At: %@",[[[self.messages objectAtIndex:indexPath.row] created_at] description]);
-    cell.detailTextLabel.text = [(FLUsers*)[(FLMessages*)[self.messages objectAtIndex:indexPath.row]sender]nickname];
+    cell.detailTextLabel.text = [(FLMessages*)[self.messages objectAtIndex:indexPath.row] stripped_body];
     return cell;
 }
 
@@ -139,13 +144,16 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    FLConversations *selectedMessage = [self.messages objectAtIndex:indexPath.row];
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        if (!self.detailViewController) {
+            self.detailViewController = [[FLDetailViewController alloc] initWithNibName:@"FLDetailViewController_iPhone" bundle:nil];
+        }
+        self.detailViewController.detailItem = selectedMessage;    
+        [self.navigationController pushViewController:self.detailViewController animated:YES];
+    } else {
+        self.detailViewController.detailItem = selectedMessage;    
+    }
 }
 
 @end

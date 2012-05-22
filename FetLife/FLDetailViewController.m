@@ -7,7 +7,8 @@
 //
 
 #import "FLDetailViewController.h"
-#import "FLConversations.h"
+#import "FLMessages.h"
+#import "FLUsers.h"
 
 @interface FLDetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
@@ -17,7 +18,9 @@
 @implementation FLDetailViewController
 
 @synthesize detailItem = _detailItem;
-@synthesize detailDescriptionLabel = _detailDescriptionLabel;
+@synthesize bodyLabel = _bodyLabel;
+@synthesize usernameLabel = _usernameLabel;
+@synthesize dateLabel = _dateLabel;
 @synthesize masterPopoverController = _masterPopoverController;
 
 #pragma mark - Managing the detail item
@@ -38,11 +41,12 @@
 
 - (void)configureView
 {
-    // Update the user interface for the detail item.
-
-    if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
-    }
+    self.bodyLabel.text = [(FLMessages*)self.detailItem  body];
+    self.usernameLabel.text = [(FLUsers*)[(FLMessages*)self.detailItem sender] nickname];
+    NSString *formatString = [NSDateFormatter dateFormatFromTemplate:@"EdMMM h:mm a" options:0 locale:[NSLocale currentLocale]];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+    [formatter setDateFormat:formatString];
+    self.dateLabel.text = [formatter stringFromDate:[(FLMessages*)self.detailItem created_at]];
 }
 
 - (void)didReceiveMemoryWarning
