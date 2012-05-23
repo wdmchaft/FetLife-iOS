@@ -20,6 +20,9 @@
 		29580ED5155CB19C00431E20 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29580ED4155CB19C00431E20 /* CoreGraphics.framework */; };
 		29580ED6155CB20B00431E20 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2916B0C2153FB9A20050618F /* QuartzCore.framework */; };
 		2964BF7814073D47003AAB45 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2964BF7714073D47003AAB45 /* Settings.bundle */; };
+		299B7CEB156C810800A93ABF /* FLMessages.m in Sources */ = {isa = PBXBuildFile; fileRef = 299B7CEA156C810800A93ABF /* FLMessages.m */; };
+		299B7CEE156C810A00A93ABF /* FLConversations.m in Sources */ = {isa = PBXBuildFile; fileRef = 299B7CED156C810900A93ABF /* FLConversations.m */; };
+		299B7CF1156C810A00A93ABF /* FLUsers.m in Sources */ = {isa = PBXBuildFile; fileRef = 299B7CF0156C810A00A93ABF /* FLUsers.m */; };
 		29AEE42B140036AE00730510 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29AEE42A140036AE00730510 /* UIKit.framework */; };
 		29AEE42D140036AE00730510 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29AEE42C140036AE00730510 /* Foundation.framework */; };
 		29AEE42F140036AE00730510 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29AEE42E140036AE00730510 /* CoreData.framework */; };
@@ -33,9 +36,6 @@
 		29AEE44A140036AE00730510 /* FLMasterViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29AEE448140036AE00730510 /* FLMasterViewController_iPad.xib */; };
 		29AEE44D140036AE00730510 /* FLDetailViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29AEE44B140036AE00730510 /* FLDetailViewController_iPhone.xib */; };
 		29AEE450140036AE00730510 /* FLDetailViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29AEE44E140036AE00730510 /* FLDetailViewController_iPad.xib */; };
-		29D4792514187D0200B7F4D0 /* FLConversations.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D4792414187D0200B7F4D0 /* FLConversations.m */; };
-		29D4792814187D0300B7F4D0 /* FLMessages.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D4792714187D0300B7F4D0 /* FLMessages.m */; };
-		29D4792B14187D0300B7F4D0 /* FLUsers.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D4792A14187D0300B7F4D0 /* FLUsers.m */; };
 		29DC72C9140820750078A3D6 /* FLNetworkController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29DC72C8140820750078A3D6 /* FLNetworkController.m */; };
 		29E12A461564B18100EB5D8B /* FLMessagesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29E12A451564B18100EB5D8B /* FLMessagesTableViewController.m */; };
 		29F55E3B15118EC400A70306 /* FLLoginViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29F55E2E15118EC400A70306 /* FLLoginViewController_iPhone.xib */; };
@@ -260,6 +260,12 @@
 		29580ED1155CB05200431E20 /* HTMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLParser.m; sourceTree = "<group>"; };
 		29580ED4155CB19C00431E20 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		2964BF7714073D47003AAB45 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		299B7CE9156C810800A93ABF /* FLMessages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLMessages.h; sourceTree = SOURCE_ROOT; };
+		299B7CEA156C810800A93ABF /* FLMessages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLMessages.m; sourceTree = SOURCE_ROOT; };
+		299B7CEC156C810900A93ABF /* FLConversations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLConversations.h; sourceTree = "<group>"; };
+		299B7CED156C810900A93ABF /* FLConversations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLConversations.m; sourceTree = "<group>"; };
+		299B7CEF156C810A00A93ABF /* FLUsers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLUsers.h; sourceTree = "<group>"; };
+		299B7CF0156C810A00A93ABF /* FLUsers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLUsers.m; sourceTree = "<group>"; };
 		29AEE426140036AE00730510 /* FetLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FetLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29AEE42A140036AE00730510 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		29AEE42C140036AE00730510 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -279,12 +285,6 @@
 		29AEE449140036AE00730510 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FLMasterViewController_iPad.xib; sourceTree = "<group>"; };
 		29AEE44C140036AE00730510 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FLDetailViewController_iPhone.xib; sourceTree = "<group>"; };
 		29AEE44F140036AE00730510 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FLDetailViewController_iPad.xib; sourceTree = "<group>"; };
-		29D4792314187D0200B7F4D0 /* FLConversations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FLConversations.h; path = ../FLConversations.h; sourceTree = "<group>"; };
-		29D4792414187D0200B7F4D0 /* FLConversations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FLConversations.m; path = ../FLConversations.m; sourceTree = "<group>"; };
-		29D4792614187D0300B7F4D0 /* FLMessages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FLMessages.h; path = ../FLMessages.h; sourceTree = "<group>"; };
-		29D4792714187D0300B7F4D0 /* FLMessages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FLMessages.m; path = ../FLMessages.m; sourceTree = "<group>"; };
-		29D4792914187D0300B7F4D0 /* FLUsers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FLUsers.h; path = ../FLUsers.h; sourceTree = "<group>"; };
-		29D4792A14187D0300B7F4D0 /* FLUsers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FLUsers.m; path = ../FLUsers.m; sourceTree = "<group>"; };
 		29DC72C7140820750078A3D6 /* FLNetworkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLNetworkController.h; sourceTree = "<group>"; };
 		29DC72C8140820750078A3D6 /* FLNetworkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLNetworkController.m; sourceTree = "<group>"; };
 		29E12A441564B18000EB5D8B /* FLMessagesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLMessagesTableViewController.h; sourceTree = "<group>"; };
@@ -383,12 +383,12 @@
 			children = (
 				291A9B4A1400A510001A299B /* i_heart_fetlife_114.png */,
 				291A9B481400A43D001A299B /* i_heart_fetlife_57.png */,
-				29D4792914187D0300B7F4D0 /* FLUsers.h */,
-				29D4792A14187D0300B7F4D0 /* FLUsers.m */,
-				29D4792614187D0300B7F4D0 /* FLMessages.h */,
-				29D4792714187D0300B7F4D0 /* FLMessages.m */,
-				29D4792314187D0200B7F4D0 /* FLConversations.h */,
-				29D4792414187D0200B7F4D0 /* FLConversations.m */,
+				299B7CEF156C810A00A93ABF /* FLUsers.h */,
+				299B7CF0156C810A00A93ABF /* FLUsers.m */,
+				299B7CEC156C810900A93ABF /* FLConversations.h */,
+				299B7CED156C810900A93ABF /* FLConversations.m */,
+				299B7CE9156C810800A93ABF /* FLMessages.h */,
+				299B7CEA156C810800A93ABF /* FLMessages.m */,
 				29580ECE155CB05200431E20 /* HTMLNode.h */,
 				29580ECF155CB05200431E20 /* HTMLNode.m */,
 				29580ED0155CB05200431E20 /* HTMLParser.h */,
@@ -762,13 +762,13 @@
 				29AEE441140036AE00730510 /* FLMasterViewController.m in Sources */,
 				29AEE444140036AE00730510 /* FLDetailViewController.m in Sources */,
 				29DC72C9140820750078A3D6 /* FLNetworkController.m in Sources */,
-				29D4792514187D0200B7F4D0 /* FLConversations.m in Sources */,
-				29D4792814187D0300B7F4D0 /* FLMessages.m in Sources */,
-				29D4792B14187D0300B7F4D0 /* FLUsers.m in Sources */,
 				29F55E4015118EC400A70306 /* FLLoginViewController.m in Sources */,
 				29580ED2155CB05200431E20 /* HTMLNode.m in Sources */,
 				29580ED3155CB05200431E20 /* HTMLParser.m in Sources */,
 				29E12A461564B18100EB5D8B /* FLMessagesTableViewController.m in Sources */,
+				299B7CEB156C810800A93ABF /* FLMessages.m in Sources */,
+				299B7CEE156C810A00A93ABF /* FLConversations.m in Sources */,
+				299B7CF1156C810A00A93ABF /* FLUsers.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -945,6 +945,8 @@
 				HEADER_SEARCH_PATHS = (
 					"\"$(BUILT_PRODUCTS_DIR)/../../Headers\"",
 					"${SDK_DIR}/usr/include/libxml2",
+					"\"$(BUILT_PRODUCTS_DIR)/../three20\"",
+					"\"$(BUILT_PRODUCTS_DIR)/../../three20\"",
 				);
 				INFOPLIST_FILE = "FetLife/FetLife-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
@@ -966,6 +968,8 @@
 				HEADER_SEARCH_PATHS = (
 					"\"$(BUILT_PRODUCTS_DIR)/../../Headers\"",
 					"${SDK_DIR}/usr/include/libxml2",
+					"\"$(BUILT_PRODUCTS_DIR)/../three20\"",
+					"\"$(BUILT_PRODUCTS_DIR)/../../three20\"",
 				);
 				INFOPLIST_FILE = "FetLife/FetLife-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
