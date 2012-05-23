@@ -44,7 +44,8 @@
 }
 
 -(void)objectLoader:(RKObjectLoader *)objectLoader didLoadObject:(id)object{
-    self.messages = [NSArray arrayWithArray:[(FLConversations*)object messages]];
+//    NSArray *sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"created_at" ascending:YES]];
+    self.messages = [[(FLConversations*)object messages] array];
     [self.tableView reloadData];
     
 }

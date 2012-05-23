@@ -5,7 +5,7 @@
         <attribute name="archived" optional="YES" attributeType="Boolean"/>
         <attribute name="delete_url" optional="YES" attributeType="String"/>
         <attribute name="deletion_token" optional="YES" attributeType="String"/>
-        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0"/>
+        <attribute name="id" attributeType="Integer 32" defaultValueString="0" indexed="YES" syncable="YES" isSyncIdentityProperty="YES"/>
         <attribute name="last_message_timestamp" optional="YES" attributeType="Date"/>
         <attribute name="mark_as_unread_url" optional="YES" attributeType="String"/>
         <attribute name="new_message_count" optional="YES" attributeType="Integer 32" defaultValueString="0"/>
@@ -15,25 +15,20 @@
         <relationship name="messages" optional="YES" toMany="YES" minCount="1" deletionRule="Nullify" ordered="YES" destinationEntity="FLMessages" inverseName="conversation" inverseEntity="FLMessages"/>
         <relationship name="with_user" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="FLUsers" inverseName="conversations" inverseEntity="FLUsers"/>
     </entity>
-    <entity name="FLEvent">
-        <attribute name="timeStamp" optional="YES" attributeType="Date"/>
-    </entity>
-    <entity name="FLGroups"/>
+    <entity name="FLGroups" representedClassName="FLGroups"/>
     <entity name="FLMessages" representedClassName="FLMessages">
         <attribute name="body" optional="YES" attributeType="String"/>
         <attribute name="created_at" optional="YES" attributeType="Date"/>
+        <attribute name="id" attributeType="Integer 32" defaultValueString="0" indexed="YES" syncable="YES" isSyncIdentityProperty="YES"/>
         <attribute name="stripped_body" optional="YES" attributeType="String"/>
         <attribute name="unread" optional="YES" attributeType="Boolean"/>
         <relationship name="conversation" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="FLConversations" inverseName="messages" inverseEntity="FLConversations"/>
         <relationship name="sender" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="FLUsers" inverseName="messages" inverseEntity="FLUsers"/>
     </entity>
-    <entity name="FLSession">
-        <attribute name="session_id" optional="YES" attributeType="String"/>
-    </entity>
     <entity name="FLUsers" representedClassName="FLUsers">
         <attribute name="age" optional="YES" attributeType="Integer 16" defaultValueString="0"/>
         <attribute name="gender" optional="YES" attributeType="String"/>
-        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0"/>
+        <attribute name="id" attributeType="Integer 32" defaultValueString="0" indexed="YES" syncable="YES" isSyncIdentityProperty="YES"/>
         <attribute name="location" optional="YES" attributeType="String"/>
         <attribute name="medium_avatar_url" optional="YES" attributeType="String"/>
         <attribute name="mini_avatar_url" optional="YES" attributeType="String"/>
@@ -52,10 +47,8 @@
     </entity>
     <elements>
         <element name="FLConversations" positionX="-162" positionY="243" width="128" height="240"/>
-        <element name="FLEvent" positionX="261" positionY="189" width="128" height="60"/>
         <element name="FLGroups" positionX="90" positionY="192" width="128" height="45"/>
         <element name="FLMessages" positionX="178" positionY="315" width="128" height="135"/>
-        <element name="FLSession" positionX="295" positionY="63" width="128" height="60"/>
         <element name="FLUsers" positionX="475" positionY="351" width="128" height="315"/>
     </elements>
 </model>

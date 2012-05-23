@@ -39,12 +39,13 @@
     [RKObjectManager objectManagerWithBaseURLString:@"https://fetlife.com/"];
     [[RKClient sharedClient].requestQueue setShowsNetworkActivityIndicatorWhenBusy:YES];
     [RKObjectMapping addDefaultDateFormatterForString:@"yyyy/MM/dd HH:mm:ss Z" inTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"UTC"]];
-    RKObjectMapping *userMapping = [RKObjectMapping mappingForClass:[FLUsers class]];
+    RKManagedObjectStore *objectStore = [RKManagedObjectStore objectStoreWithStoreFilename:@"FetLife.sqlite"];
+    RKManagedObjectMapping *userMapping = [RKManagedObjectMapping mappingForClass:[FLUsers class] inManagedObjectStore:objectStore];
    [userMapping mapAttributes:@"id", @"nickname", @"profile_url",@"age",@"gender",@"role",@"location",@"pictures_url",@"videos_url",@"posts_url",@"medium_avatar_url",@"mini_avatar_url",@"small_avatar_url",nil];
-    RKObjectMapping *messagesMapping = [RKObjectMapping mappingForClass:[FLMessages class]];
+    RKManagedObjectMapping *messagesMapping = [RKManagedObjectMapping mappingForClass:[FLMessages class] inManagedObjectStore:objectStore];
     [messagesMapping mapAttributes:@"id", @"body", @"created_at",@"stripped_body",nil];
     [messagesMapping hasOne:@"sender" withMapping:userMapping];
-    RKObjectMapping *conversationMapping = [RKObjectMapping mappingForClass:[FLConversations class]];
+    RKManagedObjectMapping *conversationMapping = [RKManagedObjectMapping mappingForClass:[FLConversations class] inManagedObjectStore:objectStore];
     [conversationMapping mapKeyPath:@"id" toAttribute:@"id"];
     [conversationMapping mapKeyPath:@"subject" toAttribute:@"subject"];
     [conversationMapping mapKeyPath:@"archived" toAttribute:@"archived"];
@@ -52,7 +53,9 @@
     [conversationMapping mapKeyPath:@"delete_url" toAttribute:@"delete_url"];
     [conversationMapping mapKeyPath:@"deletion_token" toAttribute:@"deletion_token"];
     [conversationMapping hasOne:@"with_user" withMapping:userMapping];
-    [conversationMapping hasMany:@"messages" withMapping:messagesMapping];
+    RKObjectRelationshipMapping* conversationMessageMapping = [RKObjectRelationshipMapping mappingFromKeyPath:@"messages" toKeyPath:@"messages" withMapping:messagesMapping];
+    [conversationMapping addRelationshipMapping:conversationMessageMapping];
+//    [conversationMapping hasMany:@"messages" withMapping:messagesMapping];
     [[RKObjectManager sharedManager].mappingProvider setMapping:conversationMapping forKeyPath:@"conversations"];
     [[RKObjectManager sharedManager].mappingProvider setObjectMapping:conversationMapping forResourcePathPattern:@"/conversations/:id"];
     [[[RKObjectManager sharedManager] router] routeClass:[FLConversations class] toResourcePath:@"/conversations/:id"];
@@ -206,11 +209,9 @@
          
          If you encounter schema incompatibility errors during development, you can reduce their frequency by:
          * Simply deleting the existing store:
-         [[NSFileManager defaultManager] removeItemAtURL:storeURL error:nil]
-         
-         * Performing automatic lightweight migration by passing the following dictionary as the options parameter: 
-         [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithBool:YES], NSMigratePersistentStoresAutomaticallyOption, [NSNumber numberWithBool:YES], NSInferMappingModelAutomaticallyOption, nil];
-         
+        [[NSFileManager defaultManager] removeItemAtURL:storeURL error:nil];
+         * Performing automatic lightweight migration by passing the following dictionary as the options parameter: */
+         [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithBool:YES], NSMigratePersistentStoresAutomaticallyOption, [NSNumber numberWithBool:YES], NSInferMappingModelAutomaticallyOption, nil];/*
          Lightweight migration will only work for a limited set of schema changes; consult "Core Data Model Versioning and Data Migration Programming Guide" for details.
          
          */
